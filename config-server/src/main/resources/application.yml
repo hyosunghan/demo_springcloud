@@ -1,0 +1,13 @@
+server:
+  port: 8769
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native #本地读取配置
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared #指定配置文件路径为Resources/shared

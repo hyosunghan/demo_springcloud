@@ -8,9 +8,11 @@
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-client/pom.xml" />
         <option value="$PROJECT_DIR$/serviceribbon/pom.xml" />
-        <option value="$PROJECT_DIR$/service-ribbon/pom.xml" />
-        <option value="$PROJECT_DIR$/service-feign/pom.xml" />
-        <option value="$PROJECT_DIR$/service-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin-service/pom.xml" />
+        <option value="$PROJECT_DIR$/monitor-service/pom.xml" />
+        <option value="$PROJECT_DIR$/log-service/pom.xml" />
       </list>
     </option>
   </component>
