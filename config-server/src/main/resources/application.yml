@@ -5,9 +5,9 @@ spring:
   application:
     name: config-server
   profiles:
-    active: native #本地读取配置
+    active: native
   cloud:
     config:
       server:
         native:
-          search-locations: classpath:/shared #指定配置文件路径为Resources/shared
+          search-locations: classpath:/shared
