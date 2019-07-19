@@ -1,4 +1,4 @@
-package com.forezp.exception;
+package com.example.userservice.exception;
 
 import com.forezp.dto.RespDTO;
 import org.springframework.http.HttpStatus;

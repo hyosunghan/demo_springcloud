@@ -1,4 +1,4 @@
-package com.forezp.client;
+package com.example.userservice.client;
 
 import com.forezp.client.hystrix.AuthServiceHystrix;
 import com.forezp.entity.JWT;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 /**
- * Created by fangzhipeng on 2017/5/27.
+ * Created by hysounghan on 2019/7/12.
  */
 
 @FeignClient(value = "uaa-service",fallback =AuthServiceHystrix.class )

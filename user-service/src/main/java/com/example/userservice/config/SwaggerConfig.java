@@ -1,4 +1,4 @@
-package com.forezp.config;
+package com.example.userservice.config;
 
 
 import org.springframework.context.annotation.Bean;

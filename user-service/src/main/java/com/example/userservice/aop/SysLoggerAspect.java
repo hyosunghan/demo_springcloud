@@ -1,4 +1,4 @@
-package com.forezp.aop;
+package com.example.userservice.aop;
 
 import com.alibaba.fastjson.JSON;
 import com.forezp.annotation.SysLogger;
@@ -20,7 +20,7 @@ import java.lang.reflect.Method;
 import java.util.Date;
 
 /**
- * Created by fangzhipeng on 2017/7/12.
+ * Created by hysounghan on 2019/7/12.
  */
 @Aspect
 @Component

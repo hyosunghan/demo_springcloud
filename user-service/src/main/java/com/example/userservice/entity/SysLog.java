@@ -1,9 +1,9 @@
-package com.forezp.entity;
+package com.example.userservice.entity;
 
 import java.util.Date;
 
 /**
- * Created by fangzhipeng on 2017/7/12.
+ * Created by hyosunghan on 2019/7/12.
  */
 public class SysLog {
 

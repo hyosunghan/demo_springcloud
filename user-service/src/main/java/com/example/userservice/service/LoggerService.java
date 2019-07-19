@@ -1,4 +1,4 @@
-package com.forezp.service;
+package com.example.userservice.service;
 
 import com.alibaba.fastjson.JSON;
 import com.forezp.config.RabbitConfig;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * Created by fangzhipeng on 2017/7/12.
+ * Created by hyosunghan on 2019/7/12.
  */
 @Service
 public class LoggerService {

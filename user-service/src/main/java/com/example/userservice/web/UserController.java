@@ -1,8 +1,8 @@
 package com.example.userservice.web;
 
-import com.example.annotation.SysLogger;
-import com.example.config.RabbitConfig;
-import com.example.dto.RespDTO;
+import com.forezp.annotation.SysLogger;
+import com.forezp.config.RabbitConfig;
+import com.forezp.dto.RespDTO;
 import com.forezp.entity.User;
 import com.forezp.service.UserService;
 import com.forezp.util.BPwdEncoderUtils;
@@ -13,7 +13,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by fangzhipeng on 2017/7/10.
+ * Created by hyosunghan on 2019/7/12.
  */
 @RestController
 @RequestMapping("/user")

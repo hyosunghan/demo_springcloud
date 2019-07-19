@@ -4,8 +4,10 @@ import com.example.logservice.log.Receiver;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 
+@EnableEurekaClient
 @SpringBootApplication
 public class LogServiceApplication {
 

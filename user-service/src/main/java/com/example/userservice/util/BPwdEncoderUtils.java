@@ -1,9 +1,9 @@
-package com.forezp.util;
+package com.example.userservice.util;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
- * Created by fangzhipeng on 2017/5/31.
+ * Created by hyosunghan on 2019/7/12.
  */
 public class BPwdEncoderUtils {
 

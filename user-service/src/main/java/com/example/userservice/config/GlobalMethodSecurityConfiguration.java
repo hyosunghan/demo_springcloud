@@ -1,10 +1,10 @@
-package com.forezp.config;
+package com.example.userservice.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
 /**
- * Created by fangzhipeng on 2017/5/27.
+ * Created by hysounghan on 2019/7/12.
  */
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)

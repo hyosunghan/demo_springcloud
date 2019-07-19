@@ -1,4 +1,4 @@
-package com.forezp.config;
+package com.example.userservice.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 import org.springframework.security.oauth2.provider.token.TokenStore;
 
 /**
- * Created by fangzhipeng on 2017/5/27.
+ * Created by hysounghan on 2019/7/12.
  */
 @Configuration
 @EnableResourceServer

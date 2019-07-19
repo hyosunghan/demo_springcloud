@@ -1,4 +1,4 @@
-package com.forezp.util;
+package com.example.userservice.util;
 
 
 import org.springframework.security.core.Authentication;
@@ -7,7 +7,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import java.util.List;
 
 /**
- * Created by fangzhipeng on 2017/6/6.
+ * Created by hyosunghan on 2019/7/12.
  */
 public class UserUtils {
 

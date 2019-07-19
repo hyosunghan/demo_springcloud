@@ -1,4 +1,4 @@
-package com.forezp.client.hystrix;
+package com.example.userservice.client.hystrix;
 
 
 import com.forezp.client.AuthServiceClient;
@@ -6,7 +6,7 @@ import com.forezp.entity.JWT;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by fangzhipeng on 2017/5/31.
+ * Created by hysounghan on 2019/7/12.
  */
 @Component
 public class AuthServiceHystrix implements AuthServiceClient {

@@ -1,7 +1,7 @@
-package com.forezp.entity;
+package com.example.userservice.entity;
 
 /**
- * Created by fangzhipeng on 2017/5/27.
+ * Created by hysounghan on 2019/7/12.
  */
 public class JWT {
     private String access_token;

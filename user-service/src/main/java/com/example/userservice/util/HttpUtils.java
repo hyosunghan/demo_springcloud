@@ -1,4 +1,4 @@
-package com.forezp.util;
+package com.example.userservice.util;
 
 
 

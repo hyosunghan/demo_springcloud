@@ -1,10 +1,10 @@
-package com.forezp.entity;
+package com.example.userservice.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Created by fangzhipeng on 2017/5/27.
+ * Created by hysounghan on 2019/7/12.
  */
 
 @Entity

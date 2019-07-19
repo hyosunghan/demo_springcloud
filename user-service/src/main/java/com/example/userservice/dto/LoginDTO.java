@@ -1,9 +1,9 @@
-package com.forezp.dto;
+package com.example.userservice.dto;
 
 import com.forezp.entity.User;
 
 /**
- * Created by fangzhipeng on 2017/7/10.
+ * Created by hysounghan on 2019/7/12.
  */
 public class LoginDTO {
     private User user;

@@ -1,11 +1,11 @@
-package com.forezp.dao;
+package com.example.userservice.dao;
 
 
 import com.forezp.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * Created by fangzhipeng on 2017/5/27.
+ * Created by hysounghan on 2019/7/12.
  */
 
 public interface UserDao extends JpaRepository<User, Long> {

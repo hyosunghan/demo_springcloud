@@ -1,4 +1,4 @@
-package com.forezp.service;
+package com.example.userservice.service;
 
 import com.forezp.client.AuthServiceClient;
 import com.forezp.dao.UserDao;
@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by fangzhipeng on 2017/7/10.
+ * Created by hyosunghan on 2019/7/12.
  */
 @Service
 public class UserService {

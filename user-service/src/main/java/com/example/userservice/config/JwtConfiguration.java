@@ -1,4 +1,4 @@
-package com.forezp.config;
+package com.example.userservice.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,7 +14,7 @@ import org.springframework.util.FileCopyUtils;
 import java.io.IOException;
 
 /**
- * Created by fangzhipeng on 2017/5/27.
+ * Created by hysounghan on 2019/7/12.
  */
 @Configuration
 public class JwtConfiguration {
