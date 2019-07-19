@@ -4,7 +4,7 @@
     |               |            |  config-server                |   mysql
     |               |用户服务     |->注册中心:8761                 |<->消息队列
     |               |user-service|  eureka-server                |   rabbitmq
-    |网关服务   ->   |授权服务:9999|->日志服务                      |  _________
+    |网关服务:5000 ->|授权服务:9999|->日志服务:                     |  _________
     |gateway-service|uaa-service |  log-service                  |  |       |
     |               |博客服务     |->链路中心:9411                 |<-|commons|
     |               |blog-service|  zipkin-server(jar)           |  |_______|

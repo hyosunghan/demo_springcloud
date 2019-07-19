@@ -20,10 +20,8 @@ public class Receiver {
     SysLogService sysLogService;
     public void receiveMessage(String message) {
         System.out.println("Received <" + message + ">");
-        SysLog sysLog=  JSON.parseObject(message,SysLog.class);
+        SysLog sysLog = JSON.parseObject(message, SysLog.class);
         sysLogService.saveLogger(sysLog);
         latch.countDown();
     }
-
-
 }

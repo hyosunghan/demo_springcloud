@@ -1,21 +1,22 @@
+server:
+  port: 9997
+
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/sys-log?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    url: jdbc:mysql://192.168.2.128:3306/sys-log?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
     username: root
-    password: 123456
+    password: 1234
   jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
 
   rabbitmq:
-    host: localhost
+    host: 192.168.2.128
     port: 5672
-    username: guest
-    password: guest
+    username: admin
+    password: admin
     publisher-confirms: true
     virtual-host: /
-
-server:
-  port: 9997

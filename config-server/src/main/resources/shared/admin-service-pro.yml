@@ -3,7 +3,7 @@ server:
 security:
   user:
     name: admin
-    password: 123456
+    password: admin
 management:
   security:
     enabled: false
@@ -21,7 +21,7 @@ eureka:
   instance:
     metadata-map:
       user.name: admin
-      user.password: 123456
+      user.password: admin
 
 logging:
   file: "logs/admin-service-pro.log"
