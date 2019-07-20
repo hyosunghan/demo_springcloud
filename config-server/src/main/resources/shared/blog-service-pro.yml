@@ -1,5 +1,12 @@
 server:
   port: 8763
+#security:
+#  user:
+#    name: admin
+#    password: admin
+management:
+  security:
+    enabled: false
 
 spring:
   zipkin:

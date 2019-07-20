@@ -13,20 +13,30 @@
     |____________________________________________________________|   日志logs
 ==============================================================================
 技术栈:
-    Eureka              服务注册和发现
-    Spring cloud config 分布式服务配置中心
-    Spring cloud oauth2 安全解决方案
-    Feign               声明式服务调用
-    Ribbon              负载均衡
-    Hystrix             熔断器
-    Hystrix dashboard   熔断器仪表盘
-    Turbine             聚合熔断器仪表盘
-    Spring cloud sleuth 集成zipkin用于服务链路追踪
-    Spring boot admin   聚合监控微服务
-    zuul                服务网关
-    spring data jpa     持久化
-    swagger             接口文档管理
-    restful api         接口风格
-    rabbitmq            消息服务器
+    eureka-server
+        Eureka              服务注册发现中心
+    config-server
+        Spring cloud config 分布式服务配置中心
+    uaa-service
+        Spring cloud oauth2 安全解决方案
+    user-service&blog-service
+        Feign               声明式服务调用
+        Ribbon              负载均衡
+        actuator            监控
+        Hystrix             熔断器
+        Hystrix dashboard   熔断器仪表盘
+    monitor-service
+        Turbine             聚合熔断器仪表盘
+    zipkin-server(jar)
+                            zipkin用于服务链路追踪
+    admin-service
+        Spring boot admin   聚合监控微服务
+    gateway-service
+        zuul                服务网关
+    log-service
+
+        spring data jpa     持久化
+        swagger             接口文档管理
+        restful api         接口风格
+        rabbitmq            消息服务器
 ===============================================================================
-1567811

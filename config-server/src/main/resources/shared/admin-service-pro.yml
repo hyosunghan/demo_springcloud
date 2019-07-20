@@ -1,9 +1,9 @@
 server:
   port: 9998
-security:
-  user:
-    name: admin
-    password: admin
+#security:
+#  user:
+#    name: admin
+#    password: admin
 management:
   security:
     enabled: false
