@@ -1,9 +1,11 @@
 package com.example.userservice.client;
 
-import com.forezp.client.hystrix.AuthServiceHystrix;
-import com.forezp.entity.JWT;
-import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.*;
+import com.example.userservice.client.hystrix.AuthServiceHystrix;
+import com.example.userservice.entity.JWT;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 /**

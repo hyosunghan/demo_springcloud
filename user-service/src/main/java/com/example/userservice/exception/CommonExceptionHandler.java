@@ -1,6 +1,7 @@
 package com.example.userservice.exception;
 
-import com.forezp.dto.RespDTO;
+import com.example.common.dto.RespDTO;
+import com.example.common.exception.CommonException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -1,7 +1,7 @@
 package com.example.blogservice.dto;
 
-import com.forezp.entity.Blog;
-import com.forezp.entity.User;
+import com.example.blogservice.entity.Blog;
+import com.example.blogservice.entity.User;
 
 /**
  * Created by hyosunghan on 2019/7/12.

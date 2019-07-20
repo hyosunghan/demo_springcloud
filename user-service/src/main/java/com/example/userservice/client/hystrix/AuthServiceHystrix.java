@@ -1,8 +1,8 @@
 package com.example.userservice.client.hystrix;
 
 
-import com.forezp.client.AuthServiceClient;
-import com.forezp.entity.JWT;
+import com.example.userservice.client.AuthServiceClient;
+import com.example.userservice.entity.JWT;
 import org.springframework.stereotype.Component;
 
 /**

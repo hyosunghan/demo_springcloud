@@ -1,11 +1,11 @@
 package com.example.userservice.aop;
 
 import com.alibaba.fastjson.JSON;
-import com.forezp.annotation.SysLogger;
-import com.forezp.entity.SysLog;
-import com.forezp.service.LoggerService;
-import com.forezp.util.HttpUtils;
-import com.forezp.util.UserUtils;
+import com.example.common.annotation.SysLogger;
+import com.example.userservice.entity.SysLog;
+import com.example.userservice.service.LoggerService;
+import com.example.userservice.util.HttpUtils;
+import com.example.userservice.util.UserUtils;
 import org.apache.commons.lang.StringUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -15,7 +15,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 import java.util.Date;
 
@@ -28,7 +27,7 @@ public class SysLoggerAspect {
     @Autowired
     private LoggerService loggerService;
 
-    @Pointcut("@annotation(com.forezp.annotation.SysLogger)")
+    @Pointcut("@annotation(com.example.common.annotation.SysLogger)")
     public void loggerPointCut() {
 
     }

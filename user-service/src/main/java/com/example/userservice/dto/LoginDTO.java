@@ -1,6 +1,6 @@
 package com.example.userservice.dto;
 
-import com.forezp.entity.User;
+import com.example.userservice.entity.User;
 
 /**
  * Created by hysounghan on 2019/7/12.

@@ -1,14 +1,16 @@
 package com.example.userservice.service;
 
-import com.forezp.client.AuthServiceClient;
-import com.forezp.dao.UserDao;
-import com.forezp.dto.LoginDTO;
-import com.forezp.dto.RespDTO;
-import com.forezp.entity.JWT;
-import com.forezp.entity.User;
-import com.forezp.exception.CommonException;
-import com.forezp.exception.ErrorCode;
-import com.forezp.util.BPwdEncoderUtils;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.example.common.dto.RespDTO;
+import com.example.common.exception.CommonException;
+import com.example.common.exception.ErrorCode;
+import com.example.userservice.client.AuthServiceClient;
+import com.example.userservice.dto.LoginDTO;
+import com.example.userservice.entity.JWT;
+import com.example.userservice.entity.User;
+import com.example.userservice.mapper.UserMapper;
+import com.example.userservice.util.BPwdEncoderUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,22 +18,20 @@ import org.springframework.stereotype.Service;
  * Created by hyosunghan on 2019/7/12.
  */
 @Service
-public class UserService {
+public class UserService extends ServiceImpl<UserMapper, User> {
 
-    @Autowired
-    UserDao userDao;
     @Autowired
     AuthServiceClient authServiceClient;
 
-    public User createUser(User user){
-      return  userDao.save(user);
+    public int createUser(User user){
+        return this.baseMapper.insert(user);
     }
 
     public User getUserInfo(String username){
-        return userDao.findByUsername(username);
+        return this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
     }
     public RespDTO login(String username , String password){
-       User user= userDao.findByUsername(username);
+       User user= this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
        if(null==user){
            throw new CommonException(ErrorCode.USER_NOT_FOUND);
        }

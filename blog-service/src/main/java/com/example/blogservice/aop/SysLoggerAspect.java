@@ -1,11 +1,11 @@
 package com.example.blogservice.aop;
 
 import com.alibaba.fastjson.JSON;
-import com.forezp.annotation.SysLogger;
-import com.forezp.entity.SysLog;
-import com.forezp.service.LoggerService;
-import com.forezp.util.HttpUtils;
-import com.forezp.util.UserUtils;
+import com.example.blogservice.entity.SysLog;
+import com.example.blogservice.service.LoggerService;
+import com.example.blogservice.util.HttpUtils;
+import com.example.blogservice.util.UserUtils;
+import com.example.common.annotation.SysLogger;
 import org.apache.commons.lang.StringUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -27,7 +27,7 @@ public class SysLoggerAspect {
     @Autowired
     private LoggerService loggerService;
 
-    @Pointcut("@annotation(com.forezp.annotation.SysLogger)")
+    @Pointcut("@annotation(com.example.common.annotation.SysLogger)")
     public void loggerPointCut() {
 
     }

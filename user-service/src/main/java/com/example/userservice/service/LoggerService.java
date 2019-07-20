@@ -1,12 +1,11 @@
 package com.example.userservice.service;
 
 import com.alibaba.fastjson.JSON;
-import com.forezp.config.RabbitConfig;
-import com.forezp.entity.SysLog;
+import com.example.userservice.config.RabbitConfig;
+import com.example.userservice.entity.SysLog;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * Created by hyosunghan on 2019/7/12.

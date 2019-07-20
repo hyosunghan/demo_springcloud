@@ -1,16 +1,19 @@
 package com.example.userservice.web;
 
-import com.forezp.annotation.SysLogger;
-import com.forezp.config.RabbitConfig;
-import com.forezp.dto.RespDTO;
-import com.forezp.entity.User;
-import com.forezp.service.UserService;
-import com.forezp.util.BPwdEncoderUtils;
+import com.example.common.annotation.SysLogger;
+import com.example.common.dto.RespDTO;
+import com.example.userservice.entity.User;
+import com.example.userservice.service.UserService;
+import com.example.userservice.util.BPwdEncoderUtils;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by hyosunghan on 2019/7/12.

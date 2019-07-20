@@ -1,16 +1,21 @@
 package com.example.blogservice.web;
 
-import com.forezp.annotation.SysLogger;
-import com.forezp.dto.RespDTO;
-import com.forezp.entity.Blog;
-import com.forezp.exception.CommonException;
-import com.forezp.exception.ErrorCode;
-import com.forezp.service.BlogService;
-import com.forezp.util.UserUtils;
+import com.example.blogservice.entity.Blog;
+import com.example.blogservice.service.BlogService;
+import com.example.blogservice.util.UserUtils;
+import com.example.common.annotation.SysLogger;
+import com.example.common.dto.RespDTO;
+import com.example.common.exception.CommonException;
+import com.example.common.exception.ErrorCode;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -30,8 +35,8 @@ public class BlogController {
     @SysLogger("postBlog")
     public RespDTO postBlog(@RequestBody Blog blog){
         //字段判读省略
-       Blog blog1= blogService.postBlog(blog);
-       return RespDTO.onSuc(blog1);
+       int count = blogService.postBlog(blog);
+       return RespDTO.onSuc(count);
     }
 
     @ApiOperation(value = "根据用户id获取所有的blog", notes = "根据用户id获取所有的blog")

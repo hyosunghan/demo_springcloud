@@ -1,8 +1,8 @@
 package com.example.blogservice.service;
 
 import com.alibaba.fastjson.JSON;
-import com.forezp.config.RabbitConfig;
-import com.forezp.entity.SysLog;
+import com.example.blogservice.config.RabbitConfig;
+import com.example.blogservice.entity.SysLog;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

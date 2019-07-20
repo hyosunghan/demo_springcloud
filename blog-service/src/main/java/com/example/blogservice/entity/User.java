@@ -1,35 +1,35 @@
 package com.example.blogservice.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
+
 /**
- * Created by hyosunghan on 2019/7/12.
+ * Created by hysounghan on 2019/7/12.
  */
-public class User {
 
-    private Long id;
-    private String username;
-    private String password;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
+public class User implements Serializable {
 
-    public Long getId() {
-        return id;
-    }
+	@TableId(value = "id", type = IdType.AUTO)
+	private Long id;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	@NotNull
+	@TableField("username")
+	private String username;
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	@TableField("password")
+	private String password;
 }

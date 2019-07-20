@@ -1,46 +1,41 @@
 package com.example.blogservice.service;
 
 
-import com.forezp.client.UserServiceClient;
-import com.forezp.dao.BlogDao;
-import com.forezp.dto.BlogDetailDTO;
-import com.forezp.dto.RespDTO;
-import com.forezp.entity.Blog;
-import com.forezp.entity.User;
-import com.forezp.exception.CommonException;
-import com.forezp.exception.ErrorCode;
-import com.forezp.util.UserUtils;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.example.blogservice.client.UserServiceClient;
+import com.example.blogservice.dao.BlogMapper;
+import com.example.blogservice.dto.BlogDetailDTO;
+import com.example.blogservice.entity.Blog;
+import com.example.blogservice.entity.User;
+import com.example.blogservice.util.UserUtils;
+import com.example.common.dto.RespDTO;
+import com.example.common.exception.CommonException;
+import com.example.common.exception.ErrorCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by hyosunghan on 2019/7/12.
  */
 @Service
-public class BlogService {
-
-    @Autowired
-    BlogDao blogDao;
+public class BlogService extends ServiceImpl<BlogMapper, Blog> {
 
     @Autowired
     UserServiceClient userServiceClient;
 
-    public Blog postBlog(Blog blog) {
-        return blogDao.save(blog);
+    public int postBlog(Blog blog) {
+        return this.baseMapper.insert(blog);
     }
 
     public List<Blog> findBlogs(String username) {
-        return blogDao.findByUsername(username);
+        return this.baseMapper.selectList(Wrappers.<Blog>lambdaQuery().eq(Blog::getUsername, username));
     }
 
-
     public BlogDetailDTO findBlogDetail(Long id) {
-        Blog blog = blogDao.findOne(id);
+        Blog blog = this.baseMapper.selectById(id);
         if (null == blog) {
             throw new CommonException(ErrorCode.BLOG_IS_NOT_EXIST);
         }

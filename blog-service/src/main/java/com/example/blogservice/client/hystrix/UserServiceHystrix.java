@@ -1,8 +1,8 @@
 package com.example.blogservice.client.hystrix;
 
-import com.forezp.client.UserServiceClient;
-import com.forezp.dto.RespDTO;
-import com.forezp.entity.User;
+import com.example.blogservice.client.UserServiceClient;
+import com.example.blogservice.entity.User;
+import com.example.common.dto.RespDTO;
 import org.springframework.stereotype.Component;
 
 
