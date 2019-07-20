@@ -1,8 +1,8 @@
 package com.example.logservice.rabbit;
 
 import com.alibaba.fastjson.JSON;
-import com.example.logservice.log.SysLog;
-import com.example.logservice.log.SysLogService;
+import com.example.logservice.entity.SysLog;
+import com.example.logservice.service.SysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
