@@ -12,6 +12,6 @@ spring:
         native:
           search-locations: classpath:/shared
 
-#management:
-#  security:
-#    enabled: false
+management:
+  security:
+    enabled: false

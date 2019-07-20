@@ -1,9 +1,17 @@
 package com.example.uaaservice.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
@@ -12,33 +20,24 @@ import java.util.List;
  * Created by hyosunghan on 2019/7/12.
  */
 
-@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@TableName("user")
 public class User implements UserDetails, Serializable {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+	@TableId(value = "id", type = IdType.AUTO)
 	private Long id;
 
-	@Column(nullable = false,  unique = true)
+	@NotNull
+	@TableField("username")
 	private String username;
 
-	@Column
+	@TableField("password")
 	private String password;
 
-	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-			inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
 	private List<Role> authorities;
-
-
-	public User() {
-	}
-
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -47,24 +46,6 @@ public class User implements UserDetails, Serializable {
 
 	public void setAuthorities(List<Role> authorities) {
 		this.authorities = authorities;
-	}
-
-	@Override
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	@Override
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 	@Override
