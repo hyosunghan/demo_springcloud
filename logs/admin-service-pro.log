@@ -286,3 +286,1086 @@ Caused by: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentE
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702)
 	... 16 common frames omitted
 
+2019-07-20 17:05:16.601  INFO 11228 --- [main] c.e.a.AdminServiceApplication            : The following profiles are active: pro
+2019-07-20 17:05:16.624  INFO 11228 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@53d102a2: startup date [Sat Jul 20 17:05:16 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2892d68
+2019-07-20 17:05:17.839 ERROR 11228 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:441)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:128)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:328)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:18)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1012)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:164)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:153)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:203)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:115)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:265)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:254)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:196)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:81)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 34 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 38 common frames omitted
+
+2019-07-20 17:05:17.846  INFO 11228 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@53d102a2: startup date [Sat Jul 20 17:05:16 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2892d68
+2019-07-20 17:05:17.848  WARN 11228 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:390)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:511)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:503)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1198)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:889)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:875)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:861)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:810)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:18)
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 24 common frames omitted
+
+2019-07-20 17:09:41.307  INFO 17136 --- [main] c.e.a.AdminServiceApplication            : The following profiles are active: pro
+2019-07-20 17:09:41.328  INFO 17136 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22ffa91a: startup date [Sat Jul 20 17:09:41 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4686afc2
+2019-07-20 17:09:42.268 ERROR 17136 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:441)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:128)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:328)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:18)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1012)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:164)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:153)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:203)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:115)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:265)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:254)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:196)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:81)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 34 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 38 common frames omitted
+
+2019-07-20 17:09:42.275  INFO 17136 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22ffa91a: startup date [Sat Jul 20 17:09:41 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4686afc2
+2019-07-20 17:09:42.276  WARN 17136 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:390)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:511)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:503)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1198)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:889)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:875)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:861)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:810)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:18)
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 24 common frames omitted
+
+2019-07-20 17:10:51.540  INFO 1412 --- [main] c.e.a.AdminServiceApplication            : The following profiles are active: pro
+2019-07-20 17:10:51.557  INFO 1412 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35f26e72: startup date [Sat Jul 20 17:10:51 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@36916eb0
+2019-07-20 17:10:52.463 ERROR 1412 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:441)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:128)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:328)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:15)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1012)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:164)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:153)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:203)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:115)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:265)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:254)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:196)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:81)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 34 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 38 common frames omitted
+
+2019-07-20 17:10:52.466  INFO 1412 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35f26e72: startup date [Sat Jul 20 17:10:51 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@36916eb0
+2019-07-20 17:10:52.468  WARN 1412 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:390)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:511)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:503)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1198)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:889)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:875)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:861)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:810)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:15)
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 24 common frames omitted
+
+2019-07-20 17:25:58.799  INFO 9724 --- [main] c.e.a.AdminServiceApplication            : The following profiles are active: pro
+2019-07-20 17:25:58.815  INFO 9724 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67c2e933: startup date [Sat Jul 20 17:25:58 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@449a4f23
+2019-07-20 17:25:59.720 ERROR 9724 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:441)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:128)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:328)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:15)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1012)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:164)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:153)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:203)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:115)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:265)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:254)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:196)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:81)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 34 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 38 common frames omitted
+
+2019-07-20 17:25:59.724  INFO 9724 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67c2e933: startup date [Sat Jul 20 17:25:58 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@449a4f23
+2019-07-20 17:25:59.725  WARN 9724 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:390)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:511)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:503)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1198)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:889)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:875)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:861)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:810)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:15)
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 24 common frames omitted
+
+2019-07-20 17:36:00.336  INFO 15576 --- [main] c.e.a.AdminServiceApplication            : The following profiles are active: pro
+2019-07-20 17:36:00.351  INFO 15576 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54dcfa5a: startup date [Sat Jul 20 17:36:00 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6340e5f0
+2019-07-20 17:36:01.357 ERROR 15576 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:441)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:128)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:328)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:15)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1012)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:164)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:153)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:203)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:115)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:265)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:254)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:196)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:81)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 34 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 38 common frames omitted
+
+2019-07-20 17:36:01.360  INFO 15576 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54dcfa5a: startup date [Sat Jul 20 17:36:00 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6340e5f0
+2019-07-20 17:36:01.361  WARN 15576 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:390)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:511)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:503)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1198)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:889)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:875)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:861)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:810)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:15)
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 24 common frames omitted
+
+2019-07-20 17:40:37.301  INFO 17272 --- [main] c.e.a.AdminServiceApplication            : The following profiles are active: pro
+2019-07-20 17:40:37.318  INFO 17272 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5cde6747: startup date [Sat Jul 20 17:40:37 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@659499f1
+2019-07-20 17:40:38.220 ERROR 17272 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:441)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:128)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:328)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:23)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1012)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:164)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:153)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:203)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:115)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:265)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:254)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:196)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:81)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 34 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 38 common frames omitted
+
+2019-07-20 17:40:38.223  INFO 17272 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5cde6747: startup date [Sat Jul 20 17:40:37 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@659499f1
+2019-07-20 17:40:38.225  WARN 17272 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [spring.boot.admin.turbine.config.TurbineAutoConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:724)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:665)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:633)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:390)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:511)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:503)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1198)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:889)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:875)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:861)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:810)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.adminservice.AdminServiceApplication.main(AdminServiceApplication.java:23)
+Caused by: java.lang.NoClassDefFoundError: de/codecentric/boot/admin/config/AdminServerProperties
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: de.codecentric.boot.admin.config.AdminServerProperties
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 24 common frames omitted
+
+2019-07-20 18:06:44.118  INFO 13064 --- [main] c.e.a.AdminServiceApplication            : The following profiles are active: pro
+2019-07-20 18:06:44.134  INFO 13064 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@68be8808: startup date [Sat Jul 20 18:06:44 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@783a467b
+2019-07-20 18:06:45.267  INFO 13064 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a01fc69d-0be8-3a94-835b-ae8b873c7f2c
+2019-07-20 18:06:45.291  INFO 13064 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-20 18:06:45.407  INFO 13064 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2b928bb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-20 18:06:45.780  INFO 13064 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9998 (http)
+2019-07-20 18:06:45.804  INFO 13064 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-20 18:06:45.804  INFO 13064 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-07-20 18:06:45.809  INFO 13064 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\apache-maven-3.6.1\bin;C:\Users\ihyos\AppData\Local\Microsoft\WindowsApps;;.]
+2019-07-20 18:06:45.955  INFO 13064 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-20 18:06:45.955  INFO 13064 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1821 ms
+2019-07-20 18:06:46.236  WARN 13064 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-20 18:06:46.237  INFO 13064 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-20 18:06:46.557  INFO 13064 --- [localhost-startStop-1] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2a7a0fb7
+2019-07-20 18:06:48.366  INFO 13064 --- [localhost-startStop-1] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-07-20 18:06:49.902  INFO 13064 --- [localhost-startStop-1] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-07-20 18:06:50.506  INFO 13064 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-20 18:06:50.506  INFO 13064 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-20 18:06:50.506  INFO 13064 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-20 18:06:50.506  INFO 13064 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-20 18:06:50.507  INFO 13064 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-07-20 18:06:50.507  INFO 13064 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2019-07-20 18:06:50.507  INFO 13064 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-07-20 18:06:50.507  INFO 13064 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-07-20 18:06:50.577  WARN 13064 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-20 18:06:50.577  INFO 13064 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-20 18:06:50.793  INFO 13064 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-20 18:06:50.925  INFO 13064 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'webMvcAsyncTaskExecutor'
+2019-07-20 18:06:50.940  INFO 13064 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@68be8808: startup date [Sat Jul 20 18:06:44 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@783a467b
+2019-07-20 18:06:51.017  INFO 13064 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-20 18:06:51.018  INFO 13064 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-20 18:06:51.057  INFO 13064 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-20 18:06:51.057  INFO 13064 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-20 18:06:51.121  WARN 13064 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-20 18:06:52.351  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{instanceId}/actuator/**],methods=[GET || HEAD || POST || PUT || PATCH || DELETE || OPTIONS]}" onto public reactor.core.publisher.Mono<java.lang.Void> de.codecentric.boot.admin.server.web.servlet.InstancesProxyController.endpointProxy(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-07-20 18:06:52.389  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances],methods=[POST],consumes=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, de.codecentric.boot.admin.server.domain.values.InstanceId>>> de.codecentric.boot.admin.server.web.InstancesController.register(de.codecentric.boot.admin.server.domain.values.Registration,org.springframework.web.util.UriComponentsBuilder)
+2019-07-20 18:06:52.390  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{id}],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instance(java.lang.String)
+2019-07-20 18:06:52.391  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{id}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.InstancesController.unregister(java.lang.String)
+2019-07-20 18:06:52.391  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.entities.Instance> de.codecentric.boot.admin.server.web.InstancesController.instances(java.lang.String)
+2019-07-20 18:06:52.391  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/events],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.events.InstanceEvent> de.codecentric.boot.admin.server.web.InstancesController.events()
+2019-07-20 18:06:52.392  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{id}],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instanceStream(java.lang.String)
+2019-07-20 18:06:52.392  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/events],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.events.InstanceEvent>> de.codecentric.boot.admin.server.web.InstancesController.eventStream()
+2019-07-20 18:06:52.395  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications/{name}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.ApplicationsController.unregister(java.lang.String)
+2019-07-20 18:06:52.396  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications/{name}],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<de.codecentric.boot.admin.server.web.ApplicationsController$Application>> de.codecentric.boot.admin.server.web.ApplicationsController.application(java.lang.String)
+2019-07-20 18:06:52.396  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.web.ApplicationsController$Application>> de.codecentric.boot.admin.server.web.ApplicationsController.applicationsStream()
+2019-07-20 18:06:52.397  INFO 13064 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.web.ApplicationsController$Application> de.codecentric.boot.admin.server.web.ApplicationsController.applications()
+2019-07-20 18:06:53.060  INFO 13064 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b97efd90-45e1-4c2d-a8a0-55a9cbd89578
+
+2019-07-20 18:06:53.263  INFO 13064 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63fd4dda, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e02721d, org.springframework.security.web.header.HeaderWriterFilter@18a096b5, org.springframework.security.web.csrf.CsrfFilter@16d07cf3, org.springframework.security.web.authentication.logout.LogoutFilter@48268eec, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@43245559, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6d6f6860, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2c1f8dbd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@796d33eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6af5b246, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d6751e3, org.springframework.security.web.session.SessionManagementFilter@1d4f5506, org.springframework.security.web.access.ExceptionTranslationFilter@3fcbc766, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@52f6900a]
+2019-07-20 18:06:53.425  INFO 13064 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-20 18:06:53.438  INFO 13064 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-07-20 18:06:53.439  INFO 13064 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-07-20 18:06:53.440  INFO 13064 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-20 18:06:53.522  INFO 13064 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-07-20 18:06:53.534  INFO 13064 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-07-20 18:06:53.536  INFO 13064 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-07-20 18:06:53.539  INFO 13064 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-07-20 18:06:53.543  INFO 13064 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-07-20 18:06:53.555  INFO 13064 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-07-20 18:06:53.566  INFO 13064 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=68be8808,type=ConfigurationPropertiesRebinder]
+2019-07-20 18:06:53.585  INFO 13064 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2019-07-20 18:06:53.593  INFO 13064 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-07-20 18:06:53.727  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-20 18:06:53.871  INFO 13064 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-20 18:06:53.872  INFO 13064 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-20 18:06:54.009  INFO 13064 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-20 18:06:54.009  INFO 13064 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-20 18:06:54.226  INFO 13064 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-20 18:06:54.464  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-20 18:06:54.464  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-20 18:06:54.464  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-20 18:06:54.464  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-20 18:06:54.464  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-20 18:06:54.464  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-20 18:06:54.464  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-20 18:06:54.597  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-20 18:06:54.601  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-20 18:06:54.604  INFO 13064 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-20 18:06:54.609  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1563617214607 with initial instances count: 6
+2019-07-20 18:06:54.615  INFO 13064 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application admin-service with eureka with status UP
+2019-07-20 18:06:54.616  INFO 13064 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1563617214616, current=UP, previous=STARTING]
+2019-07-20 18:06:54.619  INFO 13064 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:admin-service:9998: registering service...
+2019-07-20 18:06:54.681  INFO 13064 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:admin-service:9998 - registration status: 204
+2019-07-20 18:06:55.430  INFO 13064 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9998 (http) with context path ''
+2019-07-20 18:06:55.431  INFO 13064 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9998
+2019-07-20 18:06:55.435  INFO 13064 --- [main] c.e.a.AdminServiceApplication            : Started AdminServiceApplication in 18.109 seconds (JVM running for 20.206)
+2019-07-20 18:06:56.183  INFO 13064 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-20 18:06:56.183  INFO 13064 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-20 18:06:56.191  INFO 13064 --- [RMI TCP Connection(8)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8769
+2019-07-20 18:06:56.210  INFO 13064 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2019-07-20 18:06:57.433  INFO 13064 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=f50470733d13, version=0, registration=Registration(name=BLOG-SERVICE, managementUrl=http://localhost:8763/actuator, healthUrl=http://localhost:8763/actuator/health, serviceUrl=http://localhost:8763/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:06:54.653Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:8763/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:8763
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:06:57.443  INFO 13064 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=515473113b01, version=0, registration=Registration(name=USER-SERVICE, managementUrl=http://localhost:8762/actuator, healthUrl=http://localhost:8762/actuator/health, serviceUrl=http://localhost:8762/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:06:55.360Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:8762/actuator/health)}), buildVersion=null)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:8762
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 10 common frames omitted
+
+2019-07-20 18:06:57.446  INFO 13064 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=451e7d0b601c, version=0, registration=Registration(name=LOG-SERVICE, managementUrl=http://localhost:9997/actuator, healthUrl=http://localhost:9997/actuator/health, serviceUrl=http://localhost:9997/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:06:55.343Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:9997/actuator/health)}), buildVersion=null)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9997
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 10 common frames omitted
+
+2019-07-20 18:06:57.450  INFO 13064 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=674bd9384242, version=0, registration=Registration(name=UAA-SERVICE, managementUrl=http://localhost:9999/actuator, healthUrl=http://localhost:9999/actuator/health, serviceUrl=http://localhost:9999/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:06:55.349Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:9999/actuator/health)}), buildVersion=null)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9999
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 10 common frames omitted
+
+2019-07-20 18:06:57.453  INFO 13064 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=f5ade04ba386, version=0, registration=Registration(name=MONITOR-SERVICE, managementUrl=http://localhost:8766/actuator, healthUrl=http://localhost:8766/actuator/health, serviceUrl=http://localhost:8766/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:06:55.354Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:8766/actuator/health)}), buildVersion=null)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:8766
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 10 common frames omitted
+
+2019-07-20 18:06:57.457  INFO 13064 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=9fb9fac83abe, version=0, registration=Registration(name=GATEWAY-SERVICE, managementUrl=http://localhost:5000/actuator, healthUrl=http://localhost:5000/actuator/health, serviceUrl=http://localhost:5000/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:06:55.357Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:5000/actuator/health)}), buildVersion=null)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:5000
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 10 common frames omitted
+
+2019-07-20 18:06:57.733  INFO 13064 --- [RMI TCP Connection(8)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[pro], label=null, version=null, state=null
+2019-07-20 18:09:46.815  INFO 8336 --- [main] c.e.a.AdminServiceApplication            : The following profiles are active: pro
+2019-07-20 18:09:46.831  INFO 8336 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6127a7e: startup date [Sat Jul 20 18:09:46 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@32502377
+2019-07-20 18:09:47.950  INFO 8336 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a01fc69d-0be8-3a94-835b-ae8b873c7f2c
+2019-07-20 18:09:47.973  INFO 8336 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-20 18:09:48.087  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3cdd02a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-20 18:09:48.474  INFO 8336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9998 (http)
+2019-07-20 18:09:48.498  INFO 8336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-20 18:09:48.498  INFO 8336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-07-20 18:09:48.504  INFO 8336 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\apache-maven-3.6.1\bin;C:\Users\ihyos\AppData\Local\Microsoft\WindowsApps;;.]
+2019-07-20 18:09:48.644  INFO 8336 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-20 18:09:48.644  INFO 8336 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1813 ms
+2019-07-20 18:09:48.939  WARN 8336 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-20 18:09:48.939  INFO 8336 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-20 18:09:48.952  INFO 8336 --- [localhost-startStop-1] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@28a69ddb
+2019-07-20 18:09:50.672  INFO 8336 --- [localhost-startStop-1] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-07-20 18:09:52.240  INFO 8336 --- [localhost-startStop-1] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-07-20 18:09:52.903  INFO 8336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-20 18:09:52.903  INFO 8336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-20 18:09:52.903  INFO 8336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-20 18:09:52.903  INFO 8336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-20 18:09:52.904  INFO 8336 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-07-20 18:09:52.904  INFO 8336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2019-07-20 18:09:52.905  INFO 8336 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-07-20 18:09:52.905  INFO 8336 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-07-20 18:09:52.988  WARN 8336 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-20 18:09:52.988  INFO 8336 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-20 18:09:53.219  INFO 8336 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-20 18:09:53.404  INFO 8336 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'webMvcAsyncTaskExecutor'
+2019-07-20 18:09:53.429  INFO 8336 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6127a7e: startup date [Sat Jul 20 18:09:46 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@32502377
+2019-07-20 18:09:53.525  INFO 8336 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-20 18:09:53.527  INFO 8336 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-20 18:09:53.569  INFO 8336 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-20 18:09:53.570  INFO 8336 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-20 18:09:53.667  WARN 8336 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-20 18:09:54.545  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{instanceId}/actuator/**],methods=[GET || HEAD || POST || PUT || PATCH || DELETE || OPTIONS]}" onto public reactor.core.publisher.Mono<java.lang.Void> de.codecentric.boot.admin.server.web.servlet.InstancesProxyController.endpointProxy(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-07-20 18:09:54.557  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances],methods=[POST],consumes=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, de.codecentric.boot.admin.server.domain.values.InstanceId>>> de.codecentric.boot.admin.server.web.InstancesController.register(de.codecentric.boot.admin.server.domain.values.Registration,org.springframework.web.util.UriComponentsBuilder)
+2019-07-20 18:09:54.558  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{id}],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instance(java.lang.String)
+2019-07-20 18:09:54.558  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{id}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.InstancesController.unregister(java.lang.String)
+2019-07-20 18:09:54.559  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.entities.Instance> de.codecentric.boot.admin.server.web.InstancesController.instances(java.lang.String)
+2019-07-20 18:09:54.559  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/events],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.events.InstanceEvent> de.codecentric.boot.admin.server.web.InstancesController.events()
+2019-07-20 18:09:54.559  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/events],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.events.InstanceEvent>> de.codecentric.boot.admin.server.web.InstancesController.eventStream()
+2019-07-20 18:09:54.560  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{id}],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instanceStream(java.lang.String)
+2019-07-20 18:09:54.564  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications/{name}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.ApplicationsController.unregister(java.lang.String)
+2019-07-20 18:09:54.565  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications/{name}],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<de.codecentric.boot.admin.server.web.ApplicationsController$Application>> de.codecentric.boot.admin.server.web.ApplicationsController.application(java.lang.String)
+2019-07-20 18:09:54.565  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.web.ApplicationsController$Application> de.codecentric.boot.admin.server.web.ApplicationsController.applications()
+2019-07-20 18:09:54.566  INFO 8336 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.web.ApplicationsController$Application>> de.codecentric.boot.admin.server.web.ApplicationsController.applicationsStream()
+2019-07-20 18:09:55.145  INFO 8336 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 438c8778-900c-4519-a0a8-675040a08dba
+
+2019-07-20 18:09:55.319  INFO 8336 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3bb9ca38, org.springframework.security.web.context.SecurityContextPersistenceFilter@19b02dfd, org.springframework.security.web.header.HeaderWriterFilter@5f61371d, org.springframework.security.web.csrf.CsrfFilter@52ca2652, org.springframework.security.web.authentication.logout.LogoutFilter@2519026b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@32a4ecbe, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@61191222, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5df7e31b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69f2cb04, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25b38203, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@160e99e0, org.springframework.security.web.session.SessionManagementFilter@3292d91a, org.springframework.security.web.access.ExceptionTranslationFilter@35650279, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d6f6860]
+2019-07-20 18:09:55.487  INFO 8336 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-20 18:09:55.500  INFO 8336 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-07-20 18:09:55.501  INFO 8336 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-07-20 18:09:55.502  INFO 8336 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-20 18:09:55.568  INFO 8336 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-07-20 18:09:55.580  INFO 8336 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-07-20 18:09:55.582  INFO 8336 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-07-20 18:09:55.584  INFO 8336 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-07-20 18:09:55.588  INFO 8336 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-07-20 18:09:55.598  INFO 8336 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-07-20 18:09:55.612  INFO 8336 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6127a7e,type=ConfigurationPropertiesRebinder]
+2019-07-20 18:09:55.628  INFO 8336 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2019-07-20 18:09:55.637  INFO 8336 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-07-20 18:09:55.676  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-20 18:09:55.788  INFO 8336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-20 18:09:55.788  INFO 8336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-20 18:09:55.911  INFO 8336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-20 18:09:55.911  INFO 8336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-20 18:09:56.101  INFO 8336 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-20 18:09:56.337  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-20 18:09:56.337  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-20 18:09:56.337  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-20 18:09:56.337  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-20 18:09:56.337  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-20 18:09:56.337  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-20 18:09:56.337  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-20 18:09:56.459  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-20 18:09:56.462  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-20 18:09:56.465  INFO 8336 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-20 18:09:56.469  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1563617396468 with initial instances count: 7
+2019-07-20 18:09:56.473  INFO 8336 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application admin-service with eureka with status UP
+2019-07-20 18:09:56.473  INFO 8336 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1563617396473, current=UP, previous=STARTING]
+2019-07-20 18:09:56.475  INFO 8336 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:admin-service:9998: registering service...
+2019-07-20 18:09:56.538  INFO 8336 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:admin-service:9998 - registration status: 204
+2019-07-20 18:09:57.166  INFO 8336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9998 (http) with context path ''
+2019-07-20 18:09:57.167  INFO 8336 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9998
+2019-07-20 18:09:57.171  INFO 8336 --- [main] c.e.a.AdminServiceApplication            : Started AdminServiceApplication in 18.148 seconds (JVM running for 19.576)
+2019-07-20 18:09:57.955  INFO 8336 --- [RMI TCP Connection(10)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8769
+2019-07-20 18:09:57.972  INFO 8336 --- [RMI TCP Connection(8)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-20 18:09:57.972  INFO 8336 --- [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-20 18:09:57.995  INFO 8336 --- [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2019-07-20 18:09:59.148  INFO 8336 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=f50470733d13, version=0, registration=Registration(name=BLOG-SERVICE, managementUrl=http://localhost:8763/actuator, healthUrl=http://localhost:8763/actuator/health, serviceUrl=http://localhost:8763/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:09:56.508Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:8763/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:8763
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:09:59.152  INFO 8336 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=451e7d0b601c, version=0, registration=Registration(name=LOG-SERVICE, managementUrl=http://localhost:9997/actuator, healthUrl=http://localhost:9997/actuator/health, serviceUrl=http://localhost:9997/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:09:57.101Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:9997/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:9997
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:09:59.154  INFO 8336 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=674bd9384242, version=0, registration=Registration(name=UAA-SERVICE, managementUrl=http://localhost:9999/actuator, healthUrl=http://localhost:9999/actuator/health, serviceUrl=http://localhost:9999/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:09:57.104Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:9999/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:9999
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:09:59.156  INFO 8336 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=f5ade04ba386, version=0, registration=Registration(name=MONITOR-SERVICE, managementUrl=http://localhost:8766/actuator, healthUrl=http://localhost:8766/actuator/health, serviceUrl=http://localhost:8766/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:09:57.107Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:8766/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:8766
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:09:59.157  INFO 8336 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=9fb9fac83abe, version=0, registration=Registration(name=GATEWAY-SERVICE, managementUrl=http://localhost:5000/actuator, healthUrl=http://localhost:5000/actuator/health, serviceUrl=http://localhost:5000/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:09:57.113Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:5000/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:5000
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:09:59.159  INFO 8336 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=515473113b01, version=0, registration=Registration(name=USER-SERVICE, managementUrl=http://localhost:8762/actuator, healthUrl=http://localhost:8762/actuator/health, serviceUrl=http://localhost:8762/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:09:57.116Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:8762/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:8762
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:09:59.591  INFO 8336 --- [RMI TCP Connection(10)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[pro], label=null, version=null, state=null
+2019-07-20 18:12:10.728  INFO 15236 --- [main] c.e.a.AdminServiceApplication            : The following profiles are active: pro
+2019-07-20 18:12:10.747  INFO 15236 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d6764b2: startup date [Sat Jul 20 18:12:10 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4b8ee4de
+2019-07-20 18:12:11.960  INFO 15236 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a01fc69d-0be8-3a94-835b-ae8b873c7f2c
+2019-07-20 18:12:11.985  INFO 15236 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-20 18:12:12.102  INFO 15236 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c9ffdd1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-20 18:12:12.481  INFO 15236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9998 (http)
+2019-07-20 18:12:12.514  INFO 15236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-20 18:12:12.514  INFO 15236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-07-20 18:12:12.520  INFO 15236 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\Java\jdk1.8.0_171\bin;D:\apache-maven-3.6.1\bin;C:\Users\ihyos\AppData\Local\Microsoft\WindowsApps;;.]
+2019-07-20 18:12:12.666  INFO 15236 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-20 18:12:12.666  INFO 15236 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1920 ms
+2019-07-20 18:12:12.957  WARN 15236 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-20 18:12:12.957  INFO 15236 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-20 18:12:12.968  INFO 15236 --- [localhost-startStop-1] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@666ff52e
+2019-07-20 18:12:14.700  INFO 15236 --- [localhost-startStop-1] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-07-20 18:12:16.233  INFO 15236 --- [localhost-startStop-1] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-07-20 18:12:16.802  INFO 15236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-20 18:12:16.803  INFO 15236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-20 18:12:16.803  INFO 15236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-20 18:12:16.803  INFO 15236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-20 18:12:16.804  INFO 15236 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-07-20 18:12:16.804  INFO 15236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2019-07-20 18:12:16.804  INFO 15236 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-07-20 18:12:16.804  INFO 15236 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-07-20 18:12:16.877  WARN 15236 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-20 18:12:16.877  INFO 15236 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-20 18:12:17.093  INFO 15236 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-20 18:12:17.234  INFO 15236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'webMvcAsyncTaskExecutor'
+2019-07-20 18:12:17.249  INFO 15236 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d6764b2: startup date [Sat Jul 20 18:12:10 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4b8ee4de
+2019-07-20 18:12:17.323  INFO 15236 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-20 18:12:17.324  INFO 15236 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-20 18:12:17.360  INFO 15236 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-20 18:12:17.361  INFO 15236 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-20 18:12:17.431  WARN 15236 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-20 18:12:18.264  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{instanceId}/actuator/**],methods=[GET || HEAD || POST || PUT || PATCH || DELETE || OPTIONS]}" onto public reactor.core.publisher.Mono<java.lang.Void> de.codecentric.boot.admin.server.web.servlet.InstancesProxyController.endpointProxy(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-07-20 18:12:18.276  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances],methods=[POST],consumes=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, de.codecentric.boot.admin.server.domain.values.InstanceId>>> de.codecentric.boot.admin.server.web.InstancesController.register(de.codecentric.boot.admin.server.domain.values.Registration,org.springframework.web.util.UriComponentsBuilder)
+2019-07-20 18:12:18.276  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{id}],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instance(java.lang.String)
+2019-07-20 18:12:18.277  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{id}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.InstancesController.unregister(java.lang.String)
+2019-07-20 18:12:18.277  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.entities.Instance> de.codecentric.boot.admin.server.web.InstancesController.instances(java.lang.String)
+2019-07-20 18:12:18.277  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/events],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.events.InstanceEvent> de.codecentric.boot.admin.server.web.InstancesController.events()
+2019-07-20 18:12:18.278  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/events],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.events.InstanceEvent>> de.codecentric.boot.admin.server.web.InstancesController.eventStream()
+2019-07-20 18:12:18.278  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/instances/{id}],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instanceStream(java.lang.String)
+2019-07-20 18:12:18.282  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications/{name}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.ApplicationsController.unregister(java.lang.String)
+2019-07-20 18:12:18.282  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications/{name}],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<de.codecentric.boot.admin.server.web.ApplicationsController$Application>> de.codecentric.boot.admin.server.web.ApplicationsController.application(java.lang.String)
+2019-07-20 18:12:18.282  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.web.ApplicationsController$Application>> de.codecentric.boot.admin.server.web.ApplicationsController.applicationsStream()
+2019-07-20 18:12:18.283  INFO 15236 --- [main] .b.a.s.w.s.AdminControllerHandlerMapping : Mapped "{[/applications],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.web.ApplicationsController$Application> de.codecentric.boot.admin.server.web.ApplicationsController.applications()
+2019-07-20 18:12:18.883  INFO 15236 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 02480f30-257e-47d6-9fb0-dd871c0a8bf3
+
+2019-07-20 18:12:19.087  INFO 15236 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53aa2fc9, org.springframework.security.web.context.SecurityContextPersistenceFilter@525b1b70, org.springframework.security.web.header.HeaderWriterFilter@1a950fdd, org.springframework.security.web.csrf.CsrfFilter@13803a94, org.springframework.security.web.authentication.logout.LogoutFilter@8e25d3f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@594131f2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@67fb5025, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6f9ab79d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16f0ec18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d325518, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4792f119, org.springframework.security.web.session.SessionManagementFilter@27dc627a, org.springframework.security.web.access.ExceptionTranslationFilter@2519026b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b53b1ad]
+2019-07-20 18:12:19.264  INFO 15236 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-20 18:12:19.278  INFO 15236 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-07-20 18:12:19.279  INFO 15236 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-07-20 18:12:19.280  INFO 15236 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-20 18:12:19.353  INFO 15236 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-07-20 18:12:19.365  INFO 15236 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-07-20 18:12:19.368  INFO 15236 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-07-20 18:12:19.371  INFO 15236 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-07-20 18:12:19.375  INFO 15236 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-07-20 18:12:19.385  INFO 15236 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-07-20 18:12:19.396  INFO 15236 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=2d6764b2,type=ConfigurationPropertiesRebinder]
+2019-07-20 18:12:19.412  INFO 15236 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2019-07-20 18:12:19.420  INFO 15236 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-07-20 18:12:19.457  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-20 18:12:19.520  INFO 15236 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-20 18:12:19.521  INFO 15236 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-20 18:12:19.643  INFO 15236 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-20 18:12:19.644  INFO 15236 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-20 18:12:19.826  INFO 15236 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-20 18:12:20.064  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-20 18:12:20.064  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-20 18:12:20.064  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-20 18:12:20.064  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-20 18:12:20.064  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-20 18:12:20.064  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-20 18:12:20.064  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-20 18:12:20.187  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-20 18:12:20.191  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-20 18:12:20.194  INFO 15236 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-20 18:12:20.198  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1563617540196 with initial instances count: 7
+2019-07-20 18:12:20.202  INFO 15236 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application admin-service with eureka with status UP
+2019-07-20 18:12:20.203  INFO 15236 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1563617540203, current=UP, previous=STARTING]
+2019-07-20 18:12:20.204  INFO 15236 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:admin-service:9998: registering service...
+2019-07-20 18:12:20.253  INFO 15236 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:admin-service:9998 - registration status: 204
+2019-07-20 18:12:20.881  INFO 15236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9998 (http) with context path ''
+2019-07-20 18:12:20.882  INFO 15236 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9998
+2019-07-20 18:12:20.886  INFO 15236 --- [main] c.e.a.AdminServiceApplication            : Started AdminServiceApplication in 17.518 seconds (JVM running for 18.956)
+2019-07-20 18:12:21.793  INFO 15236 --- [http-nio-9998-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-20 18:12:21.794  INFO 15236 --- [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-20 18:12:21.853  INFO 15236 --- [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 59 ms
+2019-07-20 18:12:21.864  INFO 15236 --- [RMI TCP Connection(7)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8769
+2019-07-20 18:12:22.863  INFO 15236 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=f50470733d13, version=0, registration=Registration(name=BLOG-SERVICE, managementUrl=http://localhost:8763/actuator, healthUrl=http://localhost:8763/actuator/health, serviceUrl=http://localhost:8763/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:12:20.238Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:8763/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:8763
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:12:22.868  INFO 15236 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=451e7d0b601c, version=0, registration=Registration(name=LOG-SERVICE, managementUrl=http://localhost:9997/actuator, healthUrl=http://localhost:9997/actuator/health, serviceUrl=http://localhost:9997/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:12:20.814Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:9997/actuator/health)}), buildVersion=null)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9997
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 10 common frames omitted
+
+2019-07-20 18:12:22.870  INFO 15236 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=674bd9384242, version=0, registration=Registration(name=UAA-SERVICE, managementUrl=http://localhost:9999/actuator, healthUrl=http://localhost:9999/actuator/health, serviceUrl=http://localhost:9999/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:12:20.817Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:9999/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:9999
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:12:22.872  INFO 15236 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=f5ade04ba386, version=0, registration=Registration(name=MONITOR-SERVICE, managementUrl=http://localhost:8766/actuator, healthUrl=http://localhost:8766/actuator/health, serviceUrl=http://localhost:8766/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:12:20.820Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:8766/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:8766
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:12:22.873  INFO 15236 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=9fb9fac83abe, version=0, registration=Registration(name=GATEWAY-SERVICE, managementUrl=http://localhost:5000/actuator, healthUrl=http://localhost:5000/actuator/health, serviceUrl=http://localhost:5000/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:12:20.826Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:5000/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:5000
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:12:22.876  INFO 15236 --- [reactor-http-nio-3] d.c.b.a.server.services.StatusUpdater    : Couldn't retrieve status for Instance(id=515473113b01, version=0, registration=Registration(name=USER-SERVICE, managementUrl=http://localhost:8762/actuator, healthUrl=http://localhost:8762/actuator/health, serviceUrl=http://localhost:8762/, source=discovery), registered=true, statusInfo=StatusInfo(status=UNKNOWN, details={}), statusTimestamp=2019-07-20T10:12:20.829Z, info=Info(values={}), endpoints=Endpoints(endpoints={health=Endpoint(id=health, url=http://localhost:8762/actuator/health)}), buildVersion=null)
+
+io.netty.channel.ConnectTimeoutException: connection timed out: localhost/127.0.0.1:8762
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267)
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:125)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-07-20 18:12:23.676  INFO 15236 --- [RMI TCP Connection(7)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[pro], label=null, version=null, state=null

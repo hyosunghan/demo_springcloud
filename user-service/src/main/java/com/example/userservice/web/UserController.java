@@ -28,11 +28,11 @@ public class UserController {
     @ApiOperation(value = "注册", notes = "username和password为必选项")
     @PostMapping("/registry")
     @SysLogger("registry")
-    public User createUser(@RequestBody User user){
+    public RespDTO createUser(@RequestBody User user){
         //参数判读省略,判读该用户在数据库是否已经存在省略
         String entryPassword= BPwdEncoderUtils.BCryptPassword(user.getPassword());
         user.setPassword(entryPassword);
-        return userService.createUser(user);
+        return RespDTO.onSuc(userService.createUser(user));
     }
 
     @ApiOperation(value = "登录", notes = "username和password为必选项")
@@ -40,7 +40,7 @@ public class UserController {
     @SysLogger("login")
     public RespDTO login(@RequestParam String username , @RequestParam String password){
         //参数判读省略
-      return   userService.login(username,password);
+      return userService.login(username,password);
     }
 
     @ApiOperation(value = "根据用户名获取用户", notes = "根据用户名获取用户")

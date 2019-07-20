@@ -4,10 +4,10 @@
     |               |            |  config-server                |   mysql
     |               |用户服务:8762|->注册中心:8761                 |<->消息队列
     |               |user-service|  eureka-server                |   rabbitmq
-    |网关服务:5000 ->|授权服务:9999|->日志服务:9997                 |  _________
-    |gateway-service|uaa-service |  log-service                  |  |       |
-    |               |博客服务:8763|->链路中心:9411                 |<-|commons|
-    |               |blog-service|  zipkin-server(jar)           |  |_______|
+    |网关服务:5000 ->|授权服务:9999|->链路中心:9411                 |  _________
+    |gateway-service|uaa-service |  zipkin-server(jar)           |  |       |
+    |               |博客服务:8763|->日志服务:9997                 |<-|commons|
+    |               |blog-service|  log-service                  |  |_______|
     |               |____________|->熔断仪表:8766 -> 聚合监控:9998 |   数据sql
     |                               monitor-service admin-service|   配置respo
     |____________________________________________________________|   日志logs

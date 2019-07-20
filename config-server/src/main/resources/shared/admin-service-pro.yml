@@ -8,20 +8,26 @@ management:
   security:
     enabled: false
 
-spring:
-  boot:
-    admin:
-      routes:
-        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
-      turbine:
-        clusters: default
-        location: monitor-service
-
+#spring:
+#  boot:
+#    admin:
+#      routes:
+#        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
+#      turbine:
+#        clusters: default
+#        location: monitor-service
+#
 eureka:
   instance:
     metadata-map:
       user.name: admin
       user.password: admin
-
-logging:
-  file: "logs/admin-service-pro.log"
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health #2.0后actuator的地址发生了变化
+#  client:
+#    registryFetchIntervalSeconds: 5
+#    serviceUrl:
+#      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+#
+#logging:
+#  file: "logs/admin-service-pro.log"ac
