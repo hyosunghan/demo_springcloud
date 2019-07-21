@@ -12,8 +12,4 @@
         id, username, password
     </sql>
 
-    <select id="selectCount" resultType="com.example.userservice.entity.User">
-        select * from user where id = 1
-    </select>
-
 </mapper>
