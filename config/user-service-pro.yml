@@ -20,3 +20,10 @@ spring:
 feign:
   hystrix:
     enabled: true
+#security:
+#  user:
+#    name: admin
+#    password: admin
+management:
+  security:
+    enabled: false

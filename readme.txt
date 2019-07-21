@@ -15,16 +15,15 @@
 技术栈:
     eureka-server           http://localhost:8761/
         Eureka              服务注册发现中心
-    config-server           http://localhost:8769/foo/pro
+    config-server           http://localhost:8769/{app}/{pro}/[lab]   http://localhost:8769/[lab]/{app-pro}.yml
         Spring cloud config 分布式服务配置中心
     uaa-service
         Spring cloud oauth2 安全解决方案
-    user-service&blog-service
-        Feign               声明式服务调用
-        Ribbon              负载均衡
+    user-service[blog-service]
+        Feign               声明式服务调用（Ribbon负载均衡）
         actuator            监控
-        Hystrix             熔断器
-        Hystrix dashboard   熔断器仪表盘
+        Hystrix             熔断器                 http://localhost:8762[8763]/hystrix
+        Hystrix dashboard   熔断器仪表盘          http://localhost:8762[8763]/hystrix.stream
     monitor-service
         Turbine             聚合熔断器仪表盘
     zipkin-server(jar)
@@ -32,7 +31,7 @@
     admin-service
         Spring boot admin   聚合监控微服务
     gateway-service
-        zuul                服务网关
+        zuul                服务网关（Ribbon负载均衡）
     log-service
 
         spring data jpa     持久化

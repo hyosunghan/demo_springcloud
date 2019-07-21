@@ -6,7 +6,10 @@ turbine:
     clusterConfig: default
   appConfig: user-service , blog-service
   clusterNameExpression: new String("default")
-
+#security:
+#  user:
+#    name: admin
+#    password: admin
 management:
   security:
     enabled: false
