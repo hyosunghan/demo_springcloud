@@ -34,7 +34,4 @@ eureka:
         defaultZone: http://localhost:8761/eureka/
 mybatis-plus:
   mapper-locations: classpath*:com/example/userservice/mapper/**/*Mapper.xml
-  typeAliasesPackage: com.example.userservice.entity
-#    configuration:
-#      map-underscore-to-camel-case: true
-#      cache-enabled: false
+  type-aliases-package: com.example.userservice.entity
