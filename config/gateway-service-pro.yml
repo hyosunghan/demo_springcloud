@@ -17,12 +17,15 @@ zuul:
 
   routes:
     user-service:
-        path: /userapi/**
-        url: http://localhost:8762
+      path: /userapi/**
+      serviceId: user-service
+      sensitiveHeaders:
 
-    account-service:
-        path: /accountapi/**
-        serviceId: account-service
+    blog-service:
+      path: /blogapi/**
+      serviceId: blog-service
+      sensitiveHeaders:
 
 server:
-  port: 8765
+  port: 5000
+

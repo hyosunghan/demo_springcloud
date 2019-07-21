@@ -9,13 +9,13 @@
     |               |博客服务:8763|->日志服务:9997                 |<-|commons|
     |               |blog-service|  log-service                  |  |_______|
     |               |____________|->熔断仪表:8766 -> 聚合监控:9998 |   数据sql
-    |                               monitor-service admin-service|   配置respo
+    |                               monitor-service admin-service|   配置config
     |____________________________________________________________|   日志logs
 ==============================================================================
 技术栈:
-    eureka-server
+    eureka-server           http://localhost:8761/
         Eureka              服务注册发现中心
-    config-server
+    config-server           http://localhost:8769/foo/pro
         Spring cloud config 分布式服务配置中心
     uaa-service
         Spring cloud oauth2 安全解决方案
