@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -17,6 +18,7 @@ import java.io.Serializable;
  * Created by hysounghan on 2019/7/12.
  */
 
+@Component
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
