@@ -23,28 +23,29 @@ public class UserService extends ServiceImpl<UserMapper, User> {
     @Autowired
     AuthServiceClient authServiceClient;
 
-    public int createUser(User user){
+    public int createUser(User user) {
         return this.baseMapper.insert(user);
     }
 
-    public User getUserInfo(String username){
+    public User getUserInfo(String username) {
         return this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
     }
-    public RespDTO login(String username , String password){
-       User user= this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
-       if(null==user){
-           throw new CommonException(ErrorCode.USER_NOT_FOUND);
-       }
-       if(!BPwdEncoderUtils.matches(password,user.getPassword())){
-           throw new CommonException(ErrorCode.USER_PASSWORD_ERROR);
-       }
+
+    public RespDTO login(String username, String password) {
+        User user = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
+        if (null == user) {
+            throw new CommonException(ErrorCode.USER_NOT_FOUND);
+        }
+        if (!BPwdEncoderUtils.matches(password, user.getPassword())) {
+            throw new CommonException(ErrorCode.USER_PASSWORD_ERROR);
+        }
 
         JWT jwt = authServiceClient.getToken("Basic dWFhLXNlcnZpY2U6MTIzNDU2", "password", username, password);
         // 获得用户菜单
-        if(null==jwt){
+        if (null == jwt) {
             throw new CommonException(ErrorCode.GET_TOKEN_FAIL);
         }
-        LoginDTO loginDTO=new LoginDTO();
+        LoginDTO loginDTO = new LoginDTO();
         loginDTO.setUser(user);
         loginDTO.setToken(jwt.getAccess_token());
         return RespDTO.onSuc(loginDTO);

@@ -29,6 +29,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
+        <!--声明式远程调用-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!--安全解决方案-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

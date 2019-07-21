@@ -14,8 +14,6 @@ public class UserServiceHystrix implements UserServiceClient {
 
     @Override
     public RespDTO<User> getUser(String token, String username) {
-        System.out.println(token);
-        System.out.println(username);
         return null;
     }
 }

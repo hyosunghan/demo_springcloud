@@ -18,12 +18,18 @@
     config-server           http://localhost:8769/{app}/{pro}/[lab]   http://localhost:8769/[lab]/{app-pro}.yml
         Spring cloud config 分布式服务配置中心
     uaa-service
+        Feign               声明式服务调用（Ribbon负载均衡）
         Spring cloud oauth2 安全解决方案
-    user-service[blog-service]
+    user-serviceblog-service
         Feign               声明式服务调用（Ribbon负载均衡）
         actuator            监控
-        Hystrix             熔断器                 http://localhost:8762[8763]/hystrix
-        Hystrix dashboard   熔断器仪表盘          http://localhost:8762[8763]/hystrix.stream
+        Hystrix             熔断器                 http://localhost:8762/hystrix
+        Hystrix dashboard   熔断器仪表盘          http://localhost:8762/hystrix.stream
+    blog-service
+        Feign               声明式服务调用（Ribbon负载均衡）
+        actuator            监控
+        Hystrix             熔断器                 http://localhost:8763/hystrix
+        Hystrix dashboard   熔断器仪表盘          http://localhost:8763/hystrix.stream
     monitor-service
         Turbine             聚合熔断器仪表盘
     zipkin-server(jar)
