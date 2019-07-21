@@ -23,6 +23,7 @@
       <module name="service-feign" target="1.8" />
       <module name="service-ribbon" target="1.8" />
       <module name="service-zuul" target="1.8" />
+      <module name="test-service" target="1.8" />
       <module name="zipkin-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>

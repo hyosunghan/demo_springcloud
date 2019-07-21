@@ -10,7 +10,7 @@ spring:
   cloud:
     config:
       server:
-#        native:
+#        native: #本地配置
 #          search-locations: classpath:/shared
         git:
           uri: https://github.com/hyosunghan/springcloud
