@@ -35,6 +35,6 @@ eureka:
 mybatis-plus:
   mapper-locations: classpath*:com/example/userservice/mapper/**/*Mapper.xml
   typeAliasesPackage: com.example.userservice.entity
-    configuration:
-      map-underscore-to-camel-case: true
-      cache-enabled: false
+#    configuration:
+#      map-underscore-to-camel-case: true
+#      cache-enabled: false
