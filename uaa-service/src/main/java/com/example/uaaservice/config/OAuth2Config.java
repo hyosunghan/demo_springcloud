@@ -29,7 +29,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
                 .scopes("service")
                 .autoApprove(true)
                 .authorizedGrantTypes("implicit","refresh_token", "password", "authorization_code")
-                .accessTokenValiditySeconds(24*3600);//24小时过期
+                .accessTokenValiditySeconds(24 * 3600);
     }
 
     @Override

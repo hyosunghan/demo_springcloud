@@ -24,8 +24,6 @@ public class JwtConfiguration {
     @Bean
     @Qualifier("tokenStore")
     public TokenStore tokenStore() {
-
-        System.out.println("Created JwtTokenStore");
         return new JwtTokenStore(jwtAccessTokenConverter);
     }
 

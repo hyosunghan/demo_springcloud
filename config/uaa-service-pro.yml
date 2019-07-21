@@ -8,10 +8,6 @@ spring:
 server:
   port: 9999
 
-feign:
-  hystrix:
-    enabled: true
-
 eureka:
   client:
       serviceUrl:

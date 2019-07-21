@@ -3,6 +3,7 @@ package com.example.blogservice.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,6 +20,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @ToString
+@TableName("sys_log")
 public class SysLog {
 
     @TableId(value = "id", type = IdType.AUTO)
