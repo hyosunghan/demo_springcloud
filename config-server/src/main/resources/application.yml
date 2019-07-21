@@ -14,5 +14,5 @@ spring:
 #          search-locations: classpath:/shared
         git:
           uri: https://github.com/hyosunghan/springcloud
-          search-paths: shared
+          search-paths: config
       label: master
