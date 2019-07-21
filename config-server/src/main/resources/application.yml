@@ -15,3 +15,4 @@ spring:
         git:
           uri: https://github.com/hyosunghan/springcloud
           search-paths: shared
+      label: master
