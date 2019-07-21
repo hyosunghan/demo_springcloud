@@ -23,8 +23,9 @@ public class UserService extends ServiceImpl<UserMapper, User> {
     @Autowired
     AuthServiceClient authServiceClient;
 
-    public int createUser(User user){
-        return this.baseMapper.insert(user);
+    public User createUser(User user){
+//        return this.baseMapper.insert(user);
+        return this.baseMapper.selectCount();
     }
 
     public User getUserInfo(String username){
