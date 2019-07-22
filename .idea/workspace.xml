@@ -134,7 +134,7 @@
       <file leaf-file-name="SysLoggerAspect.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/aop/SysLoggerAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="423">
               <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
@@ -814,7 +814,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163390000" />
+    <option name="totallyTimeSpent" value="163591000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -845,11 +845,11 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32874355" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.4526678" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.4526678" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8956127" weight="0.46127367" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32874355" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32874355" />
@@ -1116,6 +1116,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
