@@ -39,6 +39,7 @@ public class User implements UserDetails, Serializable {
 	@TableField("password")
 	private String password;
 
+	@TableField(exist = false)
 	private List<Role> authorities;
 
 	@Override
