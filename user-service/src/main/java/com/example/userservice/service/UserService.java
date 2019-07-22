@@ -41,7 +41,7 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         return this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
     }
 
-    public RespDTO login(String username, String password) {
+    public LoginDTO login(String username, String password) {
         User user = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
         if (null == user) {
             throw new CommonException(ErrorCode.USER_NOT_FOUND);
@@ -58,6 +58,6 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         LoginDTO loginDTO = new LoginDTO();
         loginDTO.setUser(user);
         loginDTO.setToken(jwt.getAccess_token());
-        return RespDTO.onSuc(loginDTO);
+        return loginDTO;
     }
 }

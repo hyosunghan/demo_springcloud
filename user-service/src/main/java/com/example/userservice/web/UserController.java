@@ -32,7 +32,8 @@ public class UserController {
         //参数判读省略,判读该用户在数据库是否已经存在省略
         String entryPassword= BPwdEncoderUtils.BCryptPassword(user.getPassword());
         user.setPassword(entryPassword);
-        return RespDTO.onSuc(userService.createUser(user));
+        User userInfo = userService.createUser(user);
+        return RespDTO.onSuc(userInfo);
     }
 
     @ApiOperation(value = "登录", notes = "username和password为必选项")
@@ -40,17 +41,17 @@ public class UserController {
     @SysLogger("login")
     public RespDTO login(@RequestParam String username , @RequestParam String password){
         //参数判读省略
-      return userService.login(username,password);
+      return RespDTO.onSuc(userService.login(username,password));
     }
 
     @ApiOperation(value = "根据用户名获取用户", notes = "根据用户名获取用户")
     @PostMapping("/{username}")
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('ROLE_USER')")
     @SysLogger("getUserInfo")
-   // @PreAuthorize("hasAnyAuthority('ROLE_USER')")
+    @PreAuthorize("hasAnyAuthority('ROLE_USER')")
     public RespDTO getUserInfo(@PathVariable("username") String username){
         //参数判读省略
-        User user=  userService.getUserInfo(username);
+        User user = userService.getUserInfo(username);
         return RespDTO.onSuc(user);
     }
 
