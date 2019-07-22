@@ -2,7 +2,6 @@ package com.example.userservice.service;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.common.dto.RespDTO;
 import com.example.common.exception.CommonException;
 import com.example.common.exception.ErrorCode;
 import com.example.userservice.client.AuthServiceClient;
@@ -31,9 +30,19 @@ public class UserService extends ServiceImpl<UserMapper, User> {
 
     @Transactional(rollbackFor = Exception.class)
     public User createUser(User user) {
+
+        User findResult = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, user.getUsername()));
+        if (null != findResult) {
+            throw new CommonException(ErrorCode.USER_ALREADY_EXITS);
+        }
+
+        String entryPassword= BPwdEncoderUtils.BCryptPassword(user.getPassword());
+        user.setPassword(entryPassword);
         this.baseMapper.insert(user);
+
         User result = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, user.getUsername()));
         userRoleMapper.insert(UserRole.builder().userId(result.getId()).roleId(1L).build());
+
         return result;
     }
 
@@ -57,7 +66,7 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         }
         LoginDTO loginDTO = new LoginDTO();
         loginDTO.setUser(user);
-        loginDTO.setToken(jwt.getAccess_token());
+        loginDTO.setToken("Bearer " + jwt.getAccess_token());
         return loginDTO;
     }
 }
