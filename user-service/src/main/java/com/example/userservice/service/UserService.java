@@ -9,10 +9,13 @@ import com.example.userservice.client.AuthServiceClient;
 import com.example.userservice.dto.LoginDTO;
 import com.example.userservice.entity.JWT;
 import com.example.userservice.entity.User;
+import com.example.userservice.entity.UserRole;
 import com.example.userservice.mapper.UserMapper;
+import com.example.userservice.mapper.UserRoleMapper;
 import com.example.userservice.util.BPwdEncoderUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by hyosunghan on 2019/7/12.
@@ -23,8 +26,15 @@ public class UserService extends ServiceImpl<UserMapper, User> {
     @Autowired
     AuthServiceClient authServiceClient;
 
-    public int createUser(User user) {
-        return this.baseMapper.insert(user);
+    @Autowired
+    UserRoleMapper userRoleMapper;
+
+    @Transactional(rollbackFor = Exception.class)
+    public User createUser(User user) {
+        this.baseMapper.insert(user);
+        User result = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, user.getUsername()));
+        userRoleMapper.insert(UserRole.builder().userId(result.getId()).roleId(1L).build());
+        return result;
     }
 
     public User getUserInfo(String username) {
