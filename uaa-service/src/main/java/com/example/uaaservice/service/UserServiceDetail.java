@@ -33,15 +33,15 @@ public class UserServiceDetail extends ServiceImpl<UserMapper, User> implements 
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        // 获取用户信息
+
         User user = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
 
-        // 获取用户权限
         List<UserRole> userRoles = userRoleMapper.selectList(Wrappers.<UserRole>lambdaQuery().eq(UserRole::getUserId, user.getId()));
         List<Long> userRoleIds = userRoles.stream().map(i -> i.getRoleId()).collect(Collectors.toList());
         List<Role> roles = roleMapper.selectBatchIds(userRoleIds);
 
         user.setAuthorities(roles);
+
         return user;
     }
 }

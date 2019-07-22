@@ -38,13 +38,6 @@ public class UserController {
       return RespDTO.onSuc(userService.login(username,password));
     }
 
-    /**
-     *
-     *
-     *
-     *
-     *
-     **/
     @ApiOperation(value = "根据用户名获取用户", notes = "根据用户名获取用户")
     @PostMapping("/{username}")
     @SysLogger("getUserInfo")
@@ -53,10 +46,4 @@ public class UserController {
         return RespDTO.onSuc(userService.getUserInfo(username));
     }
 
-//    @Autowired
-//    private AmqpTemplate rabbitTemplate;
-//    @GetMapping("/test")
-//    public void test(){
-//        rabbitTemplate.convertAndSend(RabbitConfig.queueName, "Hello from RabbitMQ!");
-//    }
 }

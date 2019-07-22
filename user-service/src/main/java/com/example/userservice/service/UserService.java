@@ -60,7 +60,6 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         }
 
         JWT jwt = authServiceClient.getToken("Basic dWFhLXNlcnZpY2U6MTIzNDU2", "password", username, password);
-        // 获得用户菜单
         if (null == jwt) {
             throw new CommonException(ErrorCode.GET_TOKEN_FAIL);
         }

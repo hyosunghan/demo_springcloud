@@ -26,7 +26,6 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
                 .withClient("uaa-service")
-//                .secret("123456")
                 .secret(new BCryptPasswordEncoder().encode("123456"))
                 .scopes("service")
                 .autoApprove(true)

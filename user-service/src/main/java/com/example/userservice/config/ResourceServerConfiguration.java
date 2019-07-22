@@ -15,7 +15,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
  */
 @Configuration
 @EnableResourceServer
-public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter{
+public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
     Logger log = LoggerFactory.getLogger(ResourceServerConfiguration.class);
 
     @Override
@@ -23,9 +23,8 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .regexMatchers(".*swagger.*",".*v2.*",".*webjars.*","/user/login.*","/user/registry.*","/user/test.*").permitAll()
+                .regexMatchers(".*swagger.*", ".*v2.*", ".*webjars.*", "/user/login.*", "/user/registry.*", "/user/test.*").permitAll()
                 .antMatchers("/**").authenticated();
-//        .antMatchers("/**").permitAll();
     }
 
 

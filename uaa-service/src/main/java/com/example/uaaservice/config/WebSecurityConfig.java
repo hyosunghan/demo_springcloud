@@ -30,15 +30,15 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-            .csrf().disable() //CSRF:因为不再依赖于Cookie，所以你就不需要考虑对CSRF（跨站请求伪造）的防范。
+            .csrf().disable()
                 .exceptionHandling()
                 .authenticationEntryPoint((request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED))
-//                .authenticationEntryPoint(new AuthenticationEntryPoint() {
-//                    @Override
-//                    public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
-//                        httpServletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED);
-//                    }
-//                })
+                /*.authenticationEntryPoint(new AuthenticationEntryPoint() {
+                    @Override
+                    public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
+                        httpServletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+                    }
+                })*/
                 .and()
                 .authorizeRequests()
                 .antMatchers("/**").authenticated()
@@ -56,7 +56,6 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
-//         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
         return new BCryptPasswordEncoder();
     }
 }
