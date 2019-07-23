@@ -49,8 +49,8 @@ public class UserService extends ServiceImpl<UserMapper, User> {
     @Transactional(rollbackFor = Exception.class)
     public Integer deleteUser(String username) {
         User user = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
-        if (null != user) {
-            throw new CommonException(ErrorCode.USER_ALREADY_EXITS);
+        if (null == user) {
+            throw new CommonException(ErrorCode.USER_NOT_FOUND);
         }
         userRoleMapper.delete(Wrappers.<UserRole>lambdaQuery().eq(UserRole::getUserId, user.getId()));
         return this.baseMapper.delete(Wrappers.<User>lambdaQuery().eq(User::getId, user.getId()));
