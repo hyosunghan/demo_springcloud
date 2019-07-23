@@ -5,13 +5,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
 @EnableEurekaClient
 @EnableAdminServer
 //@EnableTurbine
 //@EnableHystrixDashboard
-@EnableHystrix
+//@EnableHystrix
 @SpringBootApplication
 public class AdminServiceApplication extends SpringBootServletInitializer {
 
