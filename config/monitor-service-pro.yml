@@ -4,7 +4,7 @@ security.basic.enabled: false
 turbine:
   aggregator:
     clusterConfig: default
-  appConfig: user-service , blog-service
+  appConfig: user-service , blog-service , test , test2
   clusterNameExpression: new String("default")
 #security:
 #  user:
