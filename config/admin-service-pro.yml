@@ -8,11 +8,11 @@ management:
   security:
     enabled: false
 
-#spring:
-#  boot:
-#    admin:
-#      routes:
-#        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
+spring:
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream #,activiti
 #      turbine:
 #        clusters: default
 #        location: monitor-service
@@ -29,5 +29,5 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 #    registryFetchIntervalSeconds: 5
 #
-#logging:
-#  file: "logs/admin-service-pro.log"ac
+logging:
+  file: "logs/admin-service-pro.log"

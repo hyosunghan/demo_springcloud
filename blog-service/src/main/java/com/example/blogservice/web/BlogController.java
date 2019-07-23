@@ -30,7 +30,7 @@ public class BlogController {
     BlogService blogService;
 
     @ApiOperation(value = "发布博客", notes = "发布博客")
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('ROLE_USER')")
     @PostMapping("")
     @SysLogger("postBlog")
     public RespDTO postBlog(@RequestBody Blog blog){
