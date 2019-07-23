@@ -23,14 +23,14 @@
     user-serviceblog-service
         Feign               声明式服务调用（Ribbon负载均衡）
         actuator            监控
-        Hystrix             熔断器                 http://localhost:8762/hystrix
-        Hystrix dashboard   熔断器仪表盘          http://localhost:8762/hystrix.stream
+        Hystrix             熔断器               http://localhost:8762/hystrix
+        Hystrix dashboard   熔断器仪表盘
     blog-service
         Feign               声明式服务调用（Ribbon负载均衡）
         actuator            监控
-        Hystrix             熔断器                 http://localhost:8763/hystrix
-        Hystrix dashboard   熔断器仪表盘          http://localhost:8763/hystrix.stream
-    monitor-service
+        Hystrix             熔断器               http://localhost:8763/hystrix
+        Hystrix dashboard   熔断器仪表盘
+    monitor-service         http://localhost:8766/turbine.stream
         Turbine             聚合熔断器仪表盘
     zipkin-server(jar)
                             zipkin用于服务链路追踪
