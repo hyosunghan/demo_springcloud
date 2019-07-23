@@ -34,7 +34,7 @@
         Turbine             聚合熔断器仪表盘
     zipkin-server(jar)
                             zipkin用于服务链路追踪
-    admin-service
+    admin-service           http://localhost:9998/
         Spring boot admin   聚合监控微服务
     gateway-service
         zuul                服务网关（Ribbon负载均衡）
