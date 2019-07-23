@@ -46,8 +46,14 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         return result;
     }
 
-    public User getUserInfo(String username) {
-        return this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
+    @Transactional(rollbackFor = Exception.class)
+    public Integer deleteUser(String username) {
+        User user = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
+        if (null != user) {
+            throw new CommonException(ErrorCode.USER_ALREADY_EXITS);
+        }
+        userRoleMapper.delete(Wrappers.<UserRole>lambdaQuery().eq(UserRole::getUserId, user.getId()));
+        return this.baseMapper.delete(Wrappers.<User>lambdaQuery().eq(User::getId, user.getId()));
     }
 
     public LoginDTO login(String username, String password) {

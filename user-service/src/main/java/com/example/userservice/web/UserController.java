@@ -38,12 +38,12 @@ public class UserController {
       return RespDTO.onSuc(userService.login(username,password));
     }
 
-    @ApiOperation(value = "根据用户名获取用户", notes = "根据用户名获取用户")
-    @PostMapping("/{username}")
-    @SysLogger("getUserInfo")
+    @ApiOperation(value = "删除", notes = "根据用户名删除用户")
+    @PostMapping("/delete/{username}")
+    @SysLogger("delete")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public RespDTO getUserInfo(@PathVariable("username") String username){
-        return RespDTO.onSuc(userService.getUserInfo(username));
+    public RespDTO deleteUser(@PathVariable("username") String username){
+        return RespDTO.onSuc(userService.deleteUser(username));
     }
 
 }
