@@ -13,35 +13,42 @@
     |______________________________________________________________|   日志logs
 ====================================================================================
 技术栈:
-    eureka-server           http://localhost:8761/
-        Eureka              服务注册发现中心
-    config-server           http://localhost:8769/{app}/{pro}/[lab]   http://localhost:8769/[lab]/{app-pro}.yml
-        Spring cloud config 分布式服务配置中心
+    eureka-server
+        Eureka              服务注册发现中心        http://localhost:8761/
+    config-server
+        Spring cloud config 分布式服务配置中心      http://localhost:8769/{app}/{pro}/[lab]   http://localhost:8769/[lab]/{app-pro}.yml
     uaa-service
         Feign               声明式服务调用（Ribbon负载均衡）
         Spring cloud oauth2 安全解决方案
-    user-serviceblog-service
+        mybatis plus        持久化
+    user-serviceblog-service                     ******
         Feign               声明式服务调用（Ribbon负载均衡）
         actuator            监控
-        Hystrix             熔断器               http://localhost:8762/hystrix
+        Hystrix             熔断器                http://localhost:8762/hystrix
         Hystrix dashboard   熔断器仪表盘
-    blog-service
-        Feign               声明式服务调用（Ribbon负载均衡）
-        actuator            监控
-        Hystrix             熔断器               http://localhost:8763/hystrix
-        Hystrix dashboard   熔断器仪表盘
-    monitor-service         http://localhost:8766/turbine.stream
-        Turbine             聚合熔断器仪表盘
-    zipkin-server(jar)      http://localhost:9411/
-                            zipkin用于服务链路追踪
-    admin-service           http://localhost:9998/
-        Spring boot admin   聚合监控微服务
-    gateway-service
-        zuul                服务网关（Ribbon负载均衡）
-    log-service
-
-        spring data jpa     持久化
         swagger             接口文档管理
         restful api         接口风格
+        mybatis plus        持久化
+        rabbitmq            消息服务器
+    blog-service                                 ******
+        Feign               声明式服务调用（Ribbon负载均衡）
+        actuator            监控
+        Hystrix             熔断器                http://localhost:8763/hystrix
+        Hystrix dashboard   熔断器仪表盘
+        swagger             接口文档管理
+        restful api         接口风格
+        mybatis plus        持久化
+        rabbitmq            消息服务器
+    monitor-service
+        Turbine             聚合熔断器仪表盘        http://localhost:8766/turbine.stream
+    zipkin-server(jar)
+        zipkin              用于服务链路追踪        http://localhost:9411/
+    admin-service
+        Spring boot admin   监控微服务             http://localhost:9998/
+        Turbine             聚合熔断器仪表盘
+    gateway-service                               ******
+        zuul                服务网关（Ribbon负载均衡）
+    log-service                                   ******
+        mybatis plus        持久化
         rabbitmq            消息服务器
 ===============================================================================
