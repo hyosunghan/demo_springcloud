@@ -21,7 +21,7 @@
         Feign               声明式服务调用（Ribbon负载均衡）
         Spring cloud oauth2 安全解决方案
         mybatis plus        持久化
-    user-serviceblog-service                     ******
+    user-service                                 ******
         Feign               声明式服务调用（Ribbon负载均衡）
         actuator            监控
         Hystrix             熔断器                http://localhost:8762/hystrix
