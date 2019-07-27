@@ -1,9 +1,9 @@
 server:
   port: 9998
-security:
-  user:
-    name: admin
-    password: 123456
+#security:
+#  user:
+#    name: admin
+#    password: 123456
 management:
   security:
     enabled: false
@@ -13,15 +13,15 @@ spring:
     admin:
       routes:
         endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream #,activiti
-      turbine:
-        clusters: default
-        location: monitor-service
+#      turbine:
+#        clusters: default
+#        location: monitor-service
 
 eureka:
-  instance:
-    metadata-map:
-      user.name: admin
-      user.password: 123456
+#  instance:
+#    metadata-map:
+#      user.name: admin
+#      user.password: 123456
 #    leaseRenewalIntervalInSeconds: 10
 #    health-check-url-path: /actuator/health #2.0后actuator的地址发生了变化
   client:
