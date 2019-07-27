@@ -32,10 +32,6 @@ feign:
 management:
   security:
     enabled: false
-  endpoints:
-    web:
-      exposure:
-        include: *
 #mybatis-plus:
 #  mapper-locations: classpath*:com/example/userservice/mapper/**/*Mapper.xml
 #  type-aliases-package: com.example.userservice.entity
