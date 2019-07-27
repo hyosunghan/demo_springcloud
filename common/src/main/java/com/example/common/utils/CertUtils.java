@@ -27,6 +27,23 @@ public class CertUtils {
 
     private File exportedFile;
 
+    public static void main(String args[]) throws Exception {
+
+        CertUtils export = new CertUtils();
+
+        export.keystoreFile = new File("/D:/workspace/springcloud/uaa-service/src/main/resources/hys-jwt.jks");
+
+        export.keyStoreType = "JKS";
+
+        export.password = "hys123".toCharArray();
+
+        export.alias = "hys-jwt";
+
+        export.exportedFile = new File("/D:/workspace/springcloud/output");
+
+        export.export();
+    }
+
     public KeyPair getPrivateKey(KeyStore keystore, String alias, char[] password) {
 
         try {
@@ -97,20 +114,4 @@ public class CertUtils {
 
     }
 
-    public static void main(String args[]) throws Exception {
-
-        CertUtils export = new CertUtils();
-
-        export.keystoreFile = new File("/D:/workspace/springcloud/uaa-service/src/main/resources/hys-jwt.jks");
-
-        export.keyStoreType = "JKS";
-
-        export.password = "hys123".toCharArray();
-
-        export.alias = "hys-jwt";
-
-        export.exportedFile = new File("/D:/workspace/springcloud/output");
-
-        export.export();
-    }
 }
