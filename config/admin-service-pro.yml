@@ -5,13 +5,13 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-#    registryFetchIntervalSeconds: 5
-#  instance:
-#    metadata-map:
-#      user.name: admin
-#      user.password: 123456
-#    leaseRenewalIntervalInSeconds: 10
-#    health-check-url-path: /actuator/health #2.0后actuator的地址发生了变化
+    registryFetchIntervalSeconds: 5
+  instance:
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
 
 management:
   security:
@@ -21,11 +21,6 @@ management:
       exposure:
         include: "*"
 
-#security:
-#  user:
-#    name: admin
-#    password: 123456
-
 spring:
   boot:
     admin:
@@ -34,6 +29,10 @@ spring:
 #      turbine:
 #        clusters: default
 #        location: monitor-service
+  security:
+    user:
+      name: 'admin'
+      password: '123456'
 
 logging:
   file: "logs/admin-service-pro.log"
