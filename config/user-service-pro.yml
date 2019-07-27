@@ -39,6 +39,5 @@ management:
 #mybatis-plus:
 #  mapper-locations: classpath*:com/example/userservice/mapper/**/*Mapper.xml
 #  type-aliases-package: com.example.userservice.entity
-mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
