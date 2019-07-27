@@ -1,6 +1,11 @@
 server:
   port: 9997
 
+eureka:
+  client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -16,10 +21,6 @@ spring:
     publisher-confirms: true
     virtual-host: /
 
-eureka:
-  client:
-      serviceUrl:
-        defaultZone: http://localhost:8761/eureka/
 
 mybatis-plus:
   configuration:

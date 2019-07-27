@@ -1,3 +1,11 @@
+server:
+  port: 5000
+
+eureka:
+  client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
 hystrix:
   command:
     default:
@@ -14,22 +22,14 @@ zuul:
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
-
   routes:
     user-service:
       path: /userapi/**
       serviceId: user-service
       sensitiveHeaders:
-
     blog-service:
       path: /blogapi/**
       serviceId: blog-service
       sensitiveHeaders:
 
-server:
-  port: 5000
 
-eureka:
-  client:
-      serviceUrl:
-        defaultZone: http://localhost:8761/eureka/
