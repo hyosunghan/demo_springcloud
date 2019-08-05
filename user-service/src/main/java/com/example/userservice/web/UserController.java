@@ -2,6 +2,7 @@ package com.example.userservice.web;
 
 import com.example.common.annotation.SysLogger;
 import com.example.common.dto.RespDTO;
+import com.example.userservice.dto.LoginReq;
 import com.example.userservice.entity.User;
 import com.example.userservice.service.UserService;
 import io.swagger.annotations.ApiOperation;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -34,8 +34,8 @@ public class UserController {
     @ApiOperation(value = "登录", notes = "username和password为必选项")
     @PostMapping("/login")
     @SysLogger("login")
-    public RespDTO login(@RequestParam String username , @RequestParam String password){
-      return RespDTO.onSuc(userService.login(username,password));
+    public RespDTO login(@RequestBody LoginReq req){
+      return RespDTO.onSuc(userService.login(req));
     }
 
     @ApiOperation(value = "删除", notes = "根据用户名删除用户")

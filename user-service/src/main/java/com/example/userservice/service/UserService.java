@@ -5,7 +5,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.common.exception.CommonException;
 import com.example.common.exception.ErrorCode;
 import com.example.userservice.client.AuthServiceClient;
+import com.example.userservice.dto.LandingModeEnum;
 import com.example.userservice.dto.LoginDTO;
+import com.example.userservice.dto.LoginReq;
 import com.example.userservice.entity.JWT;
 import com.example.userservice.entity.User;
 import com.example.userservice.entity.UserRole;
@@ -56,22 +58,31 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         return this.baseMapper.delete(Wrappers.<User>lambdaQuery().eq(User::getId, user.getId()));
     }
 
-    public LoginDTO login(String username, String password) {
-        User user = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
-        if (null == user) {
-            throw new CommonException(ErrorCode.USER_NOT_FOUND);
-        }
-        if (!BPwdEncoderUtils.matches(password, user.getPassword())) {
-            throw new CommonException(ErrorCode.USER_PASSWORD_ERROR);
+    public LoginDTO login(LoginReq req) {
+        LoginDTO loginDTO = new LoginDTO();
+        Integer landingMode = req.getLandingMode();
+        switch (LandingModeEnum.getInstance(landingMode)) {
+            case LANDING_VERIFICATION:
+            case LANDING_UPASSWORD:
+            default:
+                String username = req.getUsername();
+                String password = req.getPassword();
+                User user = this.baseMapper.selectOne(Wrappers.<User>lambdaQuery().eq(User::getUsername, username));
+                if (null == user) {
+                    throw new CommonException(ErrorCode.USER_NOT_FOUND);
+                }
+                if (!BPwdEncoderUtils.matches(password, user.getPassword())) {
+                    throw new CommonException(ErrorCode.USER_PASSWORD_ERROR);
+                }
+
+                JWT jwt = authServiceClient.getToken("Basic dWFhLXNlcnZpY2U6MTIzNDU2", "password", username, password);
+                if (null == jwt) {
+                    throw new CommonException(ErrorCode.GET_TOKEN_FAIL);
+                }
+                loginDTO.setUser(user);
+                loginDTO.setToken("Bearer " + jwt.getAccess_token());
         }
 
-        JWT jwt = authServiceClient.getToken("Basic dWFhLXNlcnZpY2U6MTIzNDU2", "password", username, password);
-        if (null == jwt) {
-            throw new CommonException(ErrorCode.GET_TOKEN_FAIL);
-        }
-        LoginDTO loginDTO = new LoginDTO();
-        loginDTO.setUser(user);
-        loginDTO.setToken("Bearer " + jwt.getAccess_token());
         return loginDTO;
     }
 }
