@@ -63,6 +63,7 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         Integer landingMode = req.getLandingMode();
         switch (LandingModeEnum.getInstance(landingMode)) {
             case LANDING_VERIFICATION:
+                break;
             case LANDING_UPASSWORD:
             default:
                 String username = req.getUsername();
