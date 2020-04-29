@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://39.98.210.37:8761/eureka/
+      defaultZone: http://39.98.247.191:8761/eureka/
     registryFetchIntervalSeconds: 5
   instance:
     metadata-map:
