@@ -30,7 +30,7 @@ public class MybatisplusGenerator {
     private static String parent = "org.generator.code";
     private static String model = "user";
 
-    private static String url = "jdbc:mysql://192.168.2.128:3306/sys-user?useUnicode=true&characterEncoding=utf-8&tinyInt1isBit=false";
+    private static String url = "jdbc:mysql://localhost:3306/sys-user?useUnicode=true&characterEncoding=utf-8&tinyInt1isBit=false";
     private static String driverName = "com.mysql.cj.jdbc.Driver";
     private static String username = "root";
     private static String password = "1234";
