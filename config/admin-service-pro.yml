@@ -22,8 +22,19 @@ management:
         include: "*"
 
 spring:
+  mail:
+    host: imap.qq.com
+    username: 815379806@qq.com
+    password: rapzhodcadlebcij
+    properties:
+      mail.debug: false
+      mail.smtp.auth: true
   boot:
     admin:
+      notify:
+        mail:
+          to: ihyosung@foxmail.com
+          from: 815379806@qq.com
       routes:
         endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream #,activiti
 #      turbine:
