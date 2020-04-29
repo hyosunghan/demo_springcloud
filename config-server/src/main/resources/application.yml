@@ -10,7 +10,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/hyosunghan/springcloud
+          uri: https://github.com/hyosunghan/demo_springcloud
           search-paths: config
           username:
           password:
