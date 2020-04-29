@@ -8,6 +8,8 @@ eureka:
 
 management:
   security:
+    basic:
+      enabled: false
     enabled: false
   endpoints:
     web:
