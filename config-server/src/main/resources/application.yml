@@ -5,15 +5,15 @@ spring:
   application:
     name: config-server
   profiles:
-    active: native
+    active: native # 本地配置
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/hyosunghan/demo_springcloud
-          search-paths: config
-          username:
-          password:
-#        native:
-#          search-locations: classpath:/shared
-      label: master
+#        git:
+#          default-label: master
+#          uri: https://github.com/hyosunghan/demo_springcloud
+#          search-paths: config
+#          username:
+#          password:
+        native:
+          search-locations: classpath:/config
