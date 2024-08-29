@@ -28,4 +28,9 @@ public class BPwdEncoderUtils {
         return encoder.matches(rawPassword,encodedPassword);
     }
 
+    public static void main(String[] args) {
+        String root = BCryptPassword("root");
+        System.out.println(root);
+    }
+
 }

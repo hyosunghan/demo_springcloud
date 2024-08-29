@@ -37,7 +37,7 @@ CREATE TABLE `user_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `user` VALUES ('1', '$2a$10$rlM./Q4dh5qXYmxFxUqkRetMPf6JewV/Hj/s4qBg/6U1.mzcue2oK', 'fzp');
+INSERT INTO `user` VALUES ('1', '$2a$10$5DeQ2tOduztmynRJWzwByu9ln4/3Jp64106DPV3XIsrP.hmniY7Su', 'root');
 
 
 INSERT INTO `role` VALUES ('1', 'ROLE_USER');
