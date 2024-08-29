@@ -30,10 +30,10 @@ public class MybatisplusGenerator {
     private static String parent = "org.generator.code";
     private static String model = "user";
 
-    private static String url = "jdbc:mysql://localhost:3306/sys-user?useUnicode=true&characterEncoding=utf-8&tinyInt1isBit=false";
+    private static String url = "jdbc:mysql://localhost:3306/demo-spring-cloud?useUnicode=true&characterEncoding=utf-8&tinyInt1isBit=false";
     private static String driverName = "com.mysql.cj.jdbc.Driver";
     private static String username = "root";
-    private static String password = "1234";
+    private static String password = "root";
     private static String tableName = "user";
 
     public static void main(String[] args) throws InterruptedException {

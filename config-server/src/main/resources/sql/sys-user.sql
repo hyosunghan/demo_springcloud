@@ -1,7 +1,5 @@
 
-CREATE DATABASE  `sys-user` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-
-use `sys-user`;
+SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
 -- Table structure for role

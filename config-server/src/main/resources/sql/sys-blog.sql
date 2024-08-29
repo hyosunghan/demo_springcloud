@@ -1,24 +1,4 @@
 
-
-CREATE DATABASE  `sys-blog` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-
-use `sys-blog`;
-
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : SSSS
-Source Server Version : 50717
-Source Host           : localhost:3306
-Source Database       : sys_blog
-
-Target Server Type    : MYSQL
-Target Server Version : 50717
-File Encoding         : 65001
-
-Date: 2017-07-13 09:10:21
-*/
-
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------

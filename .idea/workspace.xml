@@ -4,27 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bba4e58-dd4c-452e-967c-621df60dfc1d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6bba4e58-dd4c-452e-967c-621df60dfc1d" name="Default" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/gateway-service-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/gateway-service-pro.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/admin-service-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/blog-service-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/gateway-service-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/log-service-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/monitor-service-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/uaa-service-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/user-service-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/admin-service-pro.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/admin-service-pro.log.2019-04-15.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/sys-blog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/sql/sys-blog.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/sys-log.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/sql/sys-log.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/sys-user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/sql/sys-user.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/utils/MybatisplusGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/utils/MybatisplusGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/sql/sys-blog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/sql/sys-blog.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/sql/sys-log.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/sql/sys-log.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/sql/sys-user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/sql/sys-user.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -392,9 +377,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BlogServiceApplication.executor": "Run",
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.LogServiceApplication.executor": "Run",
+    "Spring Boot.UaaServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/hanxiaoxing/workspace/demo_springcloud",
     "node.js.detected.package.eslint": "true",
@@ -449,7 +438,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UaaServiceApplication">
+  <component name="RunManager" selected="Spring Boot.MonitorServiceApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -624,7 +613,7 @@
       <workItem from="1563503603440" duration="31327000" />
       <workItem from="1563586595728" duration="25921000" />
       <workItem from="1563618244733" duration="63533000" />
-      <workItem from="1724896655501" duration="5052000" />
+      <workItem from="1724896655501" duration="9623000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1563434260591</created>
@@ -850,7 +839,15 @@
       <option name="project" value="LOCAL" />
       <updated>1563809578636</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fix">
+      <option name="closed" value="true" />
+      <created>1724903034119</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1724903034119</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -931,6 +928,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix" />
